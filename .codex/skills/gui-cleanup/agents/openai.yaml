@@ -1,0 +1,6 @@
+interface:
+  display_name: "GUI Cleanup"
+  short_description: "清理过期或无效的 GUI Session"
+  default_prompt: "Use $gui-cleanup to scan GUI sessions, remove stale ones safely, and report the cleanup result."
+policy:
+  allow_implicit_invocation: true

@@ -1,4 +1,4 @@
-﻿# AI Coding Template Codex Edition
+# AI Coding Template Codex Edition
 
 > 面向 Codex 的 AI 协作开发框架模板
 
@@ -94,48 +94,70 @@ my-project/
 
 ## 4. Repo-level Skills
 
-当前仓库内置 30 个 Codex skills：
+当前仓库内置 50 个 Codex skills：
 
-- `doc-generator`
-- `review-alignment`
-- `ui-demo`
-- `mock-api-generator`
-- `design-from-demo`
-- `contract-resolver`
-- `api-scanner`
-- `schema-scanner`
-- `module-scanner`
-- `tech-stack-detector`
-- `spec-validator`
-- `test-runner`
-- `test-report-generator`
-- `gate-checker`
-- `progress-updater`
-- `changelog-updater`
-- `system-scaffolder`
-- `schema-generator`
-- `context-writer`
-- `openai-expert-review`
+- `ai-pm`
 - `ai-pm-state-manager`
-- `test-plan-writer`
-- `release-summarizer`
+- `api-scanner`
+- `approve-gate`
+- `changelog-updater`
+- `check-gate`
+- `check-progress`
+- `context-writer`
+- `contract-resolver`
+- `daily-summary`
+- `design-from-demo`
+- `doc-design-validation`
+- `doc-generator`
+- `end-day`
+- `expert-review`
+- `gate-checker`
+- `gen-demo`
+- `gui-cleanup`
+- `gui-connect`
+- `gui-disconnect`
+- `init-project`
 - `integrate-project`
+- `iresume`
+- `mock-api-generator`
+- `module-scanner`
+- `new-feature`
+- `next-phase`
+- `openai-expert-review`
+- `plan-features`
+- `progress-updater`
+- `release`
+- `release-summarizer`
 - `reverse-api`
 - `reverse-schema`
-- `sync-docs`
-- `template-consumption`
-- `workflow-reference-preservation`
+- `review-alignment`
+- `run-tests`
+- `scan-project`
+- `schema-generator`
+- `schema-scanner`
+- `spec-validator`
 - `start-day`
+- `sync-docs`
+- `system-scaffolder`
+- `tech-stack-detector`
+- `template-consumption`
+- `test-plan-writer`
+- `test-report-generator`
+- `test-runner`
+- `ui-demo`
+- `workflow-reference-preservation`
 
 源码目录：
 - `.codex/skills/`
+
+当前 `.codex/commands/*.md`（除 `README.md` 外）均已补齐同名 skill。
 
 ## 5. 能力保全策略
 
 为了保留原框架全部能力，Codex 版采用以下承载方式：
 
 - 自动触发能力 -> `.codex/skills/`
-- 原命令型工作流 -> `.codex/commands/` + `docs/codex-playbooks/`
+- 命令型工作流 -> 同名 `.codex/skills/` + `.codex/commands/` + `docs/codex-playbooks/`
 - 原 subagent 编排 -> `.codex/subagents/`
 - 原内部能力说明 -> `.codex/skill-specs/`
 

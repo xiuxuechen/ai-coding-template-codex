@@ -1,0 +1,6 @@
+interface:
+  display_name: "Next Phase"
+  short_description: "校验 Gate 后推进 feature 到下一阶段"
+  default_prompt: "Use $next-phase to verify gate readiness, update the current phase, and prepare the next stage of work for a feature."
+policy:
+  allow_implicit_invocation: true

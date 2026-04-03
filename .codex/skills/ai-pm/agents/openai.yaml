@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI PM"
+  short_description: "驱动 AI PM 编排流程并委托下游动作"
+  default_prompt: "Use $ai-pm to inspect or control the AI PM driver, choose the next workflow action, and delegate execution to the appropriate downstream skills."
+policy:
+  allow_implicit_invocation: true

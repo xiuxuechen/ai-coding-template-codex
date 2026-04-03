@@ -1,0 +1,6 @@
+interface:
+  display_name: "New Feature"
+  short_description: "创建 feature 文档骨架并初始化阶段状态"
+  default_prompt: "Use $new-feature to create a new feature workspace, initialize required docs and gate files, and prepare the first kickoff artifacts."
+policy:
+  allow_implicit_invocation: true

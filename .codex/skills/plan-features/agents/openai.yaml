@@ -1,0 +1,6 @@
+interface:
+  display_name: "Plan Features"
+  short_description: "从模块拆分生成 feature 开发顺序清单"
+  default_prompt: "Use $plan-features to derive a feature rollout order from module decomposition documents, dependencies, and delivery priorities."
+policy:
+  allow_implicit_invocation: true

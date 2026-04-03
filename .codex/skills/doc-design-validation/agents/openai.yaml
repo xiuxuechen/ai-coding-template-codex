@@ -1,0 +1,6 @@
+interface:
+  display_name: "Doc Design Validation"
+  short_description: "客观验证 Foundation 设计文档的自洽性"
+  default_prompt: "Use $doc-design-validation to simulate user flows and system responsibilities, then report objective PASS, FAIL, or WARN findings for foundation docs."
+policy:
+  allow_implicit_invocation: true

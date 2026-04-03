@@ -1,0 +1,6 @@
+interface:
+  display_name: "End Day"
+  short_description: "更新今日进度、生成总结并整理提交动作"
+  default_prompt: "Use $end-day to update progress logs, generate a daily summary, review git changes, and prepare a safe end-of-day wrap-up."
+policy:
+  allow_implicit_invocation: true

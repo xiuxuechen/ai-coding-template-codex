@@ -1,0 +1,6 @@
+interface:
+  display_name: "Gen Demo"
+  short_description: "为功能快速生成可验证的 Demo"
+  default_prompt: "Use $gen-demo to create a lightweight feature demo from current context and UI flow requirements."
+policy:
+  allow_implicit_invocation: true

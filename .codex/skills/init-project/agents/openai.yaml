@@ -1,0 +1,6 @@
+interface:
+  display_name: "Init Project"
+  short_description: "初始化 Foundation 文档和框架基础目录"
+  default_prompt: "Use $init-project to scaffold the project foundation, create docs and gate status files, and prepare the repository for the Codex workflow."
+policy:
+  allow_implicit_invocation: true

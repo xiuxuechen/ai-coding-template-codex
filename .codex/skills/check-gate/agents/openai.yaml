@@ -1,0 +1,6 @@
+interface:
+  display_name: "Check Gate"
+  short_description: "检查 Gate 状态、缺失项和推进条件"
+  default_prompt: "Use $check-gate to inspect foundation or feature phase gates, identify blockers, and determine what is needed to move forward."
+policy:
+  allow_implicit_invocation: true

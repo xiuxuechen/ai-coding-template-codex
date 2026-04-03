@@ -1,0 +1,6 @@
+interface:
+  display_name: "IResume"
+  short_description: "从 feature checkpoint 恢复上下文并定位下一步"
+  default_prompt: "Use $iresume to restore the latest feature checkpoint, summarize the current phase and progress, and identify the next action."
+policy:
+  allow_implicit_invocation: true

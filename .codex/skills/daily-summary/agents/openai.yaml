@@ -1,0 +1,6 @@
+interface:
+  display_name: "Daily Summary"
+  short_description: "生成单功能或全局的每日工作总结"
+  default_prompt: "Use $daily-summary to summarize today's completed work, work in progress, blockers, and next priorities from progress logs."
+policy:
+  allow_implicit_invocation: true

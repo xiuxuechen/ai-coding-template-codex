@@ -1,0 +1,6 @@
+interface:
+  display_name: "Check Progress"
+  short_description: "查看单功能详情或全局开发进度概览"
+  default_prompt: "Use $check-progress to inspect feature progress logs and produce either a detailed feature status view or a project-wide overview."
+policy:
+  allow_implicit_invocation: true
