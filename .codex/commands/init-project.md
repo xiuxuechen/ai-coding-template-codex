@@ -103,6 +103,7 @@ always_copy:
       - 04_ROADMAP.md
       - 05_TECH_DECISIONS.md
       - 06_CODE_STANDARDS.md
+      - 07_EXECUTION_PERMISSION_POLICY.md
 ```
 
 #### 5.2 后端项目 (backend / fullstack)
@@ -213,7 +214,8 @@ docs/_foundation/
 │   ├── 03_MODULE_DECOMPOSITION.md # 模块拆分
 │   ├── 04_ROADMAP.md             # 项目路线图
 │   ├── 05_TECH_DECISIONS.md      # 技术决策
-│   └── 06_CODE_STANDARDS.md      # 项目级代码规范
+│   ├── 06_CODE_STANDARDS.md      # 项目级代码规范
+│   └── 07_EXECUTION_PERMISSION_POLICY.md # 执行权限与授权策略
 │
 ├── _ui_system/                   # UI 设计系统
 │   ├── 00_UI_TOKENS.md           # 设计令牌
@@ -235,6 +237,7 @@ docs/_foundation/
    • 03_MODULE_DECOMPOSITION.md - 拆分功能模块
    • 04_ROADMAP.md - 规划开发路线
    • 06_CODE_STANDARDS.md - 统一 AI 与人工编码规范
+   • 07_EXECUTION_PERMISSION_POLICY.md - 统一执行授权分级规则
 
 2. 🎨 完善 _ui_system/ 下的设计规范：
    • 00_UI_TOKENS.md - 定义设计令牌
@@ -263,7 +266,8 @@ docs/_foundation/
 │   ├── 03_MODULE_DECOMPOSITION.md
 │   ├── 04_ROADMAP.md
 │   ├── 05_TECH_DECISIONS.md
-│   └── 06_CODE_STANDARDS.md
+│   ├── 06_CODE_STANDARDS.md
+│   └── 07_EXECUTION_PERMISSION_POLICY.md
 │
 ├── _db_system/                   # 数据库规范
 │   └── 00_DB_CONVENTIONS.md      # 命名/类型/索引规范
@@ -282,6 +286,7 @@ docs/_foundation/
 
 1. 📖 填写 _planning/ 下的规划文档
    • 特别先确认 06_CODE_STANDARDS.md，作为后续 AI 编码统一约束
+   • 同时确认 07_EXECUTION_PERMISSION_POLICY.md，降低高频审批打断
 2. 📊 完善 _db_system/00_DB_CONVENTIONS.md 数据库规范
 3. 🔌 定义 _api_system/ 下的 API 规范
 4. ✅ 执行 /check-gate --phase=0
@@ -298,13 +303,13 @@ docs/_foundation/
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 docs/_foundation/
-├── _planning/                    # 项目规划文档 (6 files)
+├── _planning/                    # 项目规划文档 (7 files)
 ├── _db_system/                   # 数据库规范 (1 file)
 ├── _api_system/                  # API 规范体系 (4 files)
 ├── _ui_system/                   # UI 设计系统 (6 files)
 └── FOUNDATION_GATE_STATUS.yaml
 
-总计：17 个模板文件
+总计：18 个模板文件
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📝 下一步操作
@@ -312,6 +317,7 @@ docs/_foundation/
 
 1. 📖 填写 _planning/ 下的规划文档（必需）
    • 优先完成 06_CODE_STANDARDS.md，作为所有后续编码与 review 参考
+   • 建议同步完成 07_EXECUTION_PERMISSION_POLICY.md，定义开发/测试/数据库授权边界
 2. 📊 完善 _db_system/ 数据库规范（有数据库时）
 3. 🔌 定义 _api_system/ API 规范（有后端时）
 4. 🎨 完善 _ui_system/ UI 设计系统（有前端时）

@@ -49,6 +49,7 @@ Codex uses different primitives, so this folder acts as the orchestration layer 
 ### Framework preservation
 - `template-consumption.md`
 - `workflow-reference-preservation.md`
+- `permission-governor.md`
 
 ## Playbook format
 

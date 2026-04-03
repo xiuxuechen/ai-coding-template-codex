@@ -78,6 +78,7 @@ docs/_foundation/
 - `04_ROADMAP.md`
 - `05_TECH_DECISIONS.md`
 - `06_CODE_STANDARDS.md`
+- `07_EXECUTION_PERMISSION_POLICY.md`
 
 `backend` / `fullstack` 还应复制：
 - `_db_system/`
@@ -110,7 +111,7 @@ docs/_foundation/
 - 下一步先做什么
 
 建议后续顺序：
-1. 完成 `_planning/` 文档，尤其 `06_CODE_STANDARDS.md`
+1. 完成 `_planning/` 文档，尤其 `06_CODE_STANDARDS.md` 与 `07_EXECUTION_PERMISSION_POLICY.md`
 2. 运行 `doc-design-validation`
 3. 运行 `check-gate --phase=0`
 4. 通过后执行 `plan-features`
@@ -120,8 +121,9 @@ docs/_foundation/
 1. `Foundation` 是项目级别基座，不是单个 feature 文档。
 2. 项目类型必须影响模板集合，避免生成无效负担。
 3. `06_CODE_STANDARDS.md` 应作为项目级编码约束单一事实源。
-4. 初始化只负责搭骨架，不负责替用户填写内容。
-5. 覆盖已有 `Foundation` 时必须谨慎。
+4. `07_EXECUTION_PERMISSION_POLICY.md` 应作为项目级执行授权策略单一事实源。
+5. 初始化只负责搭骨架，不负责替用户填写内容。
+6. 覆盖已有 `Foundation` 时必须谨慎。
 
 ## 文档要求
 

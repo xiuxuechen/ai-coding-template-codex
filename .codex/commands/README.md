@@ -40,10 +40,11 @@ commands/
 ├── next-phase.md            # 进入下一阶段
 ├── expert-review.md         # 专家评审
 │
-├── # Foundation 阶段（3 个）
+├── # Foundation 阶段（4 个）
 ├── init-project.md          # 初始化项目
 ├── doc-design-validation.md # 验证设计文档
 ├── plan-features.md         # 生成功能清单
+├── permission-governor.md   # 设计执行权限策略
 │
 ├── # Legacy 项目整合（5 个）
 ├── integrate-project.md     # 整合现有项目
@@ -58,7 +59,7 @@ commands/
     └── gui-cleanup.md       # 清理 GUI Session
 ```
 
-## 命令列表（24 个）
+## 命令列表（25 个）
 
 ### 每日工作流
 
@@ -95,6 +96,7 @@ commands/
 | `/init-project` | Phase 0 | 初始化项目目录结构 | ✅ 已实现 |
 | `/doc-design-validation` | Phase 0 | 验证 Foundation 文档完整性 | ✅ 已实现 |
 | `/plan-features` | Phase 0 | 从 User Journey 提取功能清单 | ✅ 已实现 |
+| `/permission-governor` | Phase 0 / 跨阶段 | 设计 Codex 执行权限分级策略 | ✅ 已实现 |
 
 ### Legacy 项目整合
 
@@ -184,7 +186,7 @@ commands/
 ## 与工作流的关系
 
 ```
-Phase 0 Foundation    → /init-project, /doc-design-validation, /plan-features
+Phase 0 Foundation    → /init-project, /doc-design-validation, /plan-features, /permission-governor
 Phase 1 Kickoff       → /new-feature
 Phase 3 Demo          → /gen-demo
 Phase 6 Test          → /run-tests

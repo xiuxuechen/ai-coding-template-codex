@@ -94,7 +94,7 @@ my-project/
 
 ## 4. Repo-level Skills
 
-当前仓库内置 50 个 Codex skills：
+当前仓库内置 51 个 Codex skills：
 
 - `ai-pm`
 - `ai-pm-state-manager`
@@ -124,6 +124,7 @@ my-project/
 - `new-feature`
 - `next-phase`
 - `openai-expert-review`
+- `permission-governor`
 - `plan-features`
 - `progress-updater`
 - `release`
@@ -161,6 +162,7 @@ my-project/
 - `run-tests`: `跑一下这个 feature 的测试`、`看看测试结果并总结问题`
 - `check-gate`: `检查当前 gate 状态`、`看看 Phase 2 能不能过`
 - `init-project`: `初始化这个项目`、`先把 Foundation 搭起来`
+- `permission-governor`: `给你更高权限但要分级`、`帮我设计执行授权策略`
 - `scan-project`: `扫描这个项目结构`、`看看这个仓库是什么技术栈`
 - `end-day`: `结束今天工作`、`收工前帮我整理一下`
 - `release`: `生成这个 feature 的发布说明`、`准备 v1.0.0 的 release note`

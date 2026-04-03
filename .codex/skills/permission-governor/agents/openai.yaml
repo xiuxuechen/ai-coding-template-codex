@@ -1,0 +1,6 @@
+interface:
+  display_name: "Permission Governor"
+  short_description: "为 Codex 设计分级执行授权策略，减少低风险确认并保留高风险人工把关"
+  default_prompt: "Use $permission-governor to classify execution permissions by environment and risk, then recommend safe approval, prefix-rule, and policy decisions."
+policy:
+  allow_implicit_invocation: true

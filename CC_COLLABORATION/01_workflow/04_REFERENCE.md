@@ -66,7 +66,8 @@ docs/
 │   │   ├── 03_MODULE_DECOMPOSITION.md # 模块分解
 │   │   ├── 04_ROADMAP.md            # 路线图
 │   │   ├── 05_TECH_DECISIONS.md     # 技术决策
-│   │   └── 06_CODE_STANDARDS.md     # 代码规范约束
+│   │   ├── 06_CODE_STANDARDS.md     # 代码规范约束
+│   │   └── 07_EXECUTION_PERMISSION_POLICY.md # 执行权限策略
 │   ├── _api_system/                 # API 规范
 │   ├── _db_system/                  # DB 规范
 │   ├── _ui_system/                  # UI 规范
@@ -137,6 +138,7 @@ CC_COLLABORATION/
 | `04_ROADMAP_TEMPLATE.md` | 路线图 |
 | `05_TECH_DECISIONS_TEMPLATE.md` | 技术决策 |
 | `06_CODE_STANDARDS.md` | 项目级代码规范 |
+| `07_EXECUTION_PERMISSION_POLICY.md` | Codex 执行权限策略 |
 
 ### 3.2 功能开发模板
 
