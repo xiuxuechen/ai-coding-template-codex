@@ -2,6 +2,22 @@
 
 > 面向 Codex 的 AI 协作开发框架模板
 
+## Attribution And Status
+
+本仓库基于以下上游项目进行结构迁移和二次改造：
+
+- Upstream repository: `https://github.com/oowanghuan/ai-coding-template`
+- Original repository owner: `oowanghuan`
+- Current direction: `Codex-first` 迁移版
+
+当前仓库包含大量基于上游项目的改造内容，并非从零原创实现。
+
+重要说明：
+- 当前仓库未发现上游仓库附带明确的 `LICENSE` 文件。
+- 在上游许可证或书面授权未明确前，请不要把本仓库描述为“可自由再分发的原创开源项目”。
+- 如需公开长期维护、对外分发或继续开源发布，建议先获得原作者的明确授权或补充许可证说明。
+
+详细说明见：[NOTICE.md](D:/project/ai-coding-template-codex/ai-coding-template-src/NOTICE.md)
 ## 1. 这是什么？
 
 一套经过实战验证并已完成 Codex 适配的 **AI 协作开发框架**，包含：
