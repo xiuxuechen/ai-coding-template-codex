@@ -1,6 +1,6 @@
 ---
 name: reverse-api
-description: Reverse-engineer API routes, request fields, response structures, and source locations from an existing backend codebase to produce a maintainable API document. Use when Codex needs to generate `20_API_SPEC.md` from code, support legacy onboarding, or handle requests like “逆向 API”, “从代码提取接口文档”, “补 API 文档”, or after `integrate-project`.
+description: Reverse-engineer API documentation from existing code by detecting frameworks, routes, handlers, parameters, and response shapes. Use when Codex is asked to extract API contracts from a codebase or answer requests like “从代码逆向 API”, “帮我把接口文档反推出来”, “扫描一下后端路由”, “看看现有接口长什么样”, or “执行 reverse-api”.
 ---
 
 # Reverse API
@@ -8,6 +8,13 @@ description: Reverse-engineer API routes, request fields, response structures, a
 ## Overview
 
 从现有后端代码中逆向提取接口定义，整理成可维护的 API 文档，为 legacy 项目接入、文档同步和契约确认提供稳定基线。
+
+## Trigger Examples
+
+- `从代码逆向 API`
+- `帮我把接口文档反推出来`
+- `扫描一下后端路由`
+- `执行 reverse-api，输出成 markdown`
 
 ## Workflow
 

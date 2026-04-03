@@ -1,6 +1,6 @@
 ---
 name: end-day
-description: Wrap up the current workday by updating progress logs, generating a daily summary, checking git changes, and preparing a safe commit or push decision. Use when Codex is asked to finish today's work, record completed tasks, prepare tomorrow's next step, or answer requests like “结束今天工作”, “执行 end-day”, “收工前整理一下”, or “下班前更新进度并提交”.
+description: End the work day by consolidating progress, updating checkpoints, summarizing completed work, and preparing commit or push decisions. Use when Codex is asked to wrap up the day, prepare a handoff, or answer requests like “结束今天工作”, “收工前帮我整理一下”, “更新今天进度并保存断点”, “帮我做下班前收尾”, or “执行 end-day”.
 ---
 
 # End Day
@@ -8,6 +8,13 @@ description: Wrap up the current workday by updating progress logs, generating a
 ## Overview
 
 在结束当天工作时，更新进度、生成总结、整理 Git 状态，并明确明天的第一步动作。
+
+## Trigger Examples
+
+- `结束今天工作，帮我整理进度`
+- `收工前帮我保存断点并总结一下`
+- `更新今天的 progress log`
+- `执行 end-day，看看哪些变更适合提交`
 
 ## Workflow
 

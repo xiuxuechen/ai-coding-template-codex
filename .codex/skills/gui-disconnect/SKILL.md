@@ -1,6 +1,6 @@
 ---
 name: gui-disconnect
-description: Disconnect the current terminal from the GUI session registry and stop receiving GUI-driven commands. Use when Codex is asked to close GUI mode, disconnect the current terminal, or cleanly remove this terminal from GUI discovery.
+description: Remove the current GUI bridge session and stop accepting GUI-originated commands for this terminal. Use when Codex is asked to disconnect from the GUI bridge or answer requests like “断开 GUI”, “关闭 GUI 连接”, “把当前终端从 GUI 里移除”, or “执行 gui-disconnect”.
 ---
 
 # GUI Disconnect
@@ -8,6 +8,13 @@ description: Disconnect the current terminal from the GUI session registry and s
 ## Overview
 
 断开当前终端与 GUI 的连接，并把它从会话列表中移除。
+
+## Trigger Examples
+
+- `断开 GUI`
+- `关闭 GUI 连接`
+- `把当前终端从 GUI 里移除`
+- `执行 gui-disconnect`
 
 ## Workflow
 

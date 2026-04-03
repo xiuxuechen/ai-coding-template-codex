@@ -1,6 +1,6 @@
 ---
 name: approve-gate
-description: Approve a foundation or feature phase gate after validating required role, phase, current gate state, and approval rules. Use when Codex is asked to approve a gate, record an approval decision, or answer requests like “审批 gate”, “执行 approve-gate”, “以 PM 身份通过 Phase 1”, or “记录这次 Gate 审批”.
+description: Record a human approval for a phase gate after validating phase, role, and gate preconditions. Use when Codex is asked to approve a gate, record sign-off, or answer requests like “审批 gate”, “记录 PM 通过”, “帮我登记这次 Architect 审批”, “把这次 phase approval 写进去”, or “执行 approve-gate”.
 ---
 
 # Approve Gate
@@ -8,6 +8,13 @@ description: Approve a foundation or feature phase gate after validating require
 ## Overview
 
 在审批 Gate 前先核验状态、角色和前置条件，再记录审批结果。
+
+## Trigger Examples
+
+- `审批这个 gate`
+- `记录 PM 通过 Phase 1`
+- `帮我登记这次 Architect 审批`
+- `执行 approve-gate，写入审批轨迹`
 
 ## Workflow
 

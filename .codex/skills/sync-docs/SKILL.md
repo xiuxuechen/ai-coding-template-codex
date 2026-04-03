@@ -1,6 +1,6 @@
 ---
 name: sync-docs
-description: Compare code and documentation to find drift across APIs, data models, and module structure, then produce a conservative synchronization report or low-risk doc fixes. Use when Codex needs to check whether docs still match code, support legacy onboarding cleanup, or handle requests like “同步文档”, “检查文档和代码是否一致”, “找出 API/Schema 差异”, or after reverse-engineering work.
+description: Check documentation against code for APIs, schemas, and modules, then summarize drift and optionally propose safe fixes. Use when Codex is asked to verify design-code alignment or answer requests like “同步文档”, “检查文档和代码是否一致”, “看看接口文档有没有过期”, “帮我找出 doc drift”, or “执行 sync-docs”.
 ---
 
 # Sync Docs
@@ -8,6 +8,13 @@ description: Compare code and documentation to find drift across APIs, data mode
 ## Overview
 
 检查代码与文档之间的偏差，生成可决策的差异报告，并在低风险情况下支持保守修复，避免文档长期漂移失真。
+
+## Trigger Examples
+
+- `检查文档和代码是否一致`
+- `看看接口文档有没有过期`
+- `帮我找出 doc drift`
+- `执行 sync-docs，先只看 API`
 
 ## Workflow
 

@@ -1,6 +1,6 @@
 ---
 name: ai-pm
-description: Orchestrate the AI PM driver by reading current driver state, choosing the next workflow action, and delegating execution to other skills such as check-gate, next-phase, or expert-review. Use when Codex is asked to start, pause, resume, inspect, or stop the PM driver, or answer requests like “启动 ai-pm”, “查看 AI PM 状态”, “继续自动推进流程”, or “暂停当前编排”.
+description: Drive the AI PM orchestration loop by checking driver state, delegating to existing workflows, and deciding whether to continue, pause, or escalate. Use when Codex is asked to run the PM driver or answer requests like “启动 AI PM”, “查看 PM Driver 状态”, “继续自动推进流程”, “暂停当前编排”, or “执行 ai-pm”.
 ---
 
 # AI PM
@@ -8,6 +8,13 @@ description: Orchestrate the AI PM driver by reading current driver state, choos
 ## Overview
 
 把 AI PM 作为编排层来驱动流程推进，而不是直接替代执行层。
+
+## Trigger Examples
+
+- `启动 AI PM`
+- `查看 PM Driver 状态`
+- `继续自动推进流程`
+- `执行 ai-pm，先看当前 driver 状态`
 
 ## Workflow
 

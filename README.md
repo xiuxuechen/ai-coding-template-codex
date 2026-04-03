@@ -152,6 +152,20 @@ my-project/
 
 当前 `.codex/commands/*.md`（除 `README.md` 外）均已补齐同名 skill。
 
+## 4.1 Natural-Language Trigger Examples
+
+下面这些说法更容易触发高频 workflow skills：
+
+- `start-day`: `开始今天工作`、`帮我恢复今天要做的事情`
+- `new-feature`: `创建一个新的 feature：user-auth`、`给这个需求建一套文档骨架`
+- `run-tests`: `跑一下这个 feature 的测试`、`看看测试结果并总结问题`
+- `check-gate`: `检查当前 gate 状态`、`看看 Phase 2 能不能过`
+- `init-project`: `初始化这个项目`、`先把 Foundation 搭起来`
+- `scan-project`: `扫描这个项目结构`、`看看这个仓库是什么技术栈`
+- `end-day`: `结束今天工作`、`收工前帮我整理一下`
+- `release`: `生成这个 feature 的发布说明`、`准备 v1.0.0 的 release note`
+
+如果想更稳地命中某个 skill，可以直接在自然语言里带上 skill 名，例如：`执行 new-feature，创建 user-auth`。
 ## 5. 能力保全策略
 
 为了保留原框架全部能力，Codex 版采用以下承载方式：

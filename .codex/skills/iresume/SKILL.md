@@ -1,6 +1,6 @@
 ---
 name: iresume
-description: Resume a feature from its latest checkpoint by reading 90_PROGRESS_LOG.yaml, restoring cc_checkpoint, and surfacing the next actionable step. Use when Codex is asked to continue previous work, restore a feature context, reload the latest session, or answer requests like “继续上次的工作”, “执行 iresume”, “恢复断点”, or “帮我找回刚才做到哪了”.
+description: Restore prior work context from progress logs, checkpoints, and referenced files for a specific feature. Use when Codex is asked to resume interrupted work, restore the last checkpoint, or answer requests like “恢复上下文”, “继续昨天那个功能”, “帮我找回上次做到哪了”, “恢复这个 feature 的断点”, or “执行 iresume”.
 ---
 
 # IResume
@@ -8,6 +8,13 @@ description: Resume a feature from its latest checkpoint by reading 90_PROGRESS_
 ## Overview
 
 根据 feature 的进度日志和 checkpoint 恢复工作上下文，明确当前阶段、上次操作和下一步。
+
+## Trigger Examples
+
+- `恢复这个 feature 的上下文`
+- `继续昨天那个功能`
+- `帮我找回上次做到哪了`
+- `执行 iresume，读取最近 checkpoint`
 
 ## Workflow
 

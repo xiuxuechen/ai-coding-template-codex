@@ -1,6 +1,6 @@
 ---
 name: gui-connect
-description: Register the current terminal as a GUI-connected session so an external GUI can discover it and send commands safely. Use when Codex is asked to enable GUI mode, connect the terminal to a GUI console, or troubleshoot session registration for the GUI bridge.
+description: Register the current Codex session as a GUI bridge session so an external GUI can discover and interact with it. Use when Codex is asked to connect the CLI to a GUI bridge or answer requests like “连接 GUI”, “开启 GUI 模式”, “把当前终端接到控制台”, or “执行 gui-connect”.
 ---
 
 # GUI Connect
@@ -8,6 +8,13 @@ description: Register the current terminal as a GUI-connected session so an exte
 ## Overview
 
 将当前终端注册为 GUI Session，供外部 GUI 发现和下发命令。
+
+## Trigger Examples
+
+- `连接 GUI`
+- `开启 GUI 模式`
+- `把当前终端接到控制台`
+- `执行 gui-connect`
 
 ## Workflow
 

@@ -1,6 +1,6 @@
 ---
 name: expert-review
-description: Run an independent expert review for a feature, phase, or target file and produce a structured GO, REVISE, or BLOCK recommendation. Use when Codex is asked to perform a third-party review, evaluate readiness, or answer requests like “执行 expert-review”, “做一次独立评审”, “请给我 GO/REVISE/BLOCK 结论”, or “评审这个 Phase 4 设计”.
+description: Run an independent expert review workflow for a feature, phase, or target artifact and summarize GO, REVISE, or BLOCK outcomes. Use when Codex is asked to perform a third-party review, inspect delivery risk, or answer requests like “做专家评审”, “帮我独立 review 一下”, “给我一个 GO/REVISE/BLOCK 结论”, “评审这个 Phase 4 设计”, or “执行 expert-review”.
 ---
 
 # Expert Review
@@ -8,6 +8,13 @@ description: Run an independent expert review for a feature, phase, or target fi
 ## Overview
 
 以独立第三方视角对功能、阶段或文档进行结构化专家评审。
+
+## Trigger Examples
+
+- `做一次专家评审`
+- `帮我独立 review 一下这个设计`
+- `给我一个 GO/REVISE/BLOCK 结论`
+- `执行 expert-review，目标是 40_DESIGN_FINAL.md`
 
 ## Workflow
 

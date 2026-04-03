@@ -1,6 +1,6 @@
 ---
 name: next-phase
-description: Advance a feature to its next development phase after verifying the current phase, gate status, and required artifacts. Use when Codex is asked to move a feature forward, promote to the next phase, or answer requests like “进入下一阶段”, “执行 next-phase”, “推进到 Phase 4”, or “看看现在能不能进下一步”.
+description: Advance a feature to the next development phase only after checking gate status, required artifacts, and current phase boundaries. Use when Codex is asked to move forward, promote a feature, or answer requests like “进入下一阶段”, “帮我推进到下一个 phase”, “看看现在能不能进入 Phase 4”, “把这个功能往后推进一步”, or “执行 next-phase”.
 ---
 
 # Next Phase
@@ -8,6 +8,13 @@ description: Advance a feature to its next development phase after verifying the
 ## Overview
 
 在确认当前 Gate 与阶段条件满足后，把 feature 安全推进到下一开发阶段。
+
+## Trigger Examples
+
+- `进入下一阶段`
+- `帮我推进到下一个 phase`
+- `看看现在能不能进 Phase 4`
+- `执行 next-phase，顺便说下下一步`
 
 ## Workflow
 

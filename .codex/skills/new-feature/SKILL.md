@@ -1,6 +1,6 @@
 ---
 name: new-feature
-description: Create a new feature workspace under docs/, initialize the required documents and phase gate files, and prepare the feature for kickoff. Use when Codex is asked to start a new feature, open a feature track, bootstrap feature docs, or answer requests like “新建功能”, “执行 new-feature”, “创建一个 user-auth feature”, or “给这个需求建一套文档骨架”.
+description: Create a new feature workspace under docs/, instantiate baseline documents and gate files, and prepare the feature for context, spec, and design work. Use when Codex is asked to start a new feature, create a feature module, or answer requests like “创建新功能”, “新建一个 user-auth feature”, “给这个需求建一套文档骨架”, “帮我初始化一个新模块”, or “执行 new-feature”.
 ---
 
 # New Feature
@@ -8,6 +8,13 @@ description: Create a new feature workspace under docs/, initialize the required
 ## Overview
 
 在 `docs/<feature>/` 下创建新功能骨架，初始化核心文档、Gate 文件和首轮上下文入口。
+
+## Trigger Examples
+
+- `创建一个新的 feature：user-auth`
+- `给这个需求建一套文档骨架`
+- `帮我初始化一个新模块`
+- `执行 new-feature，名字叫 payment-refund`
 
 ## Workflow
 

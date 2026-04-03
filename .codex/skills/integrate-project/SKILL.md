@@ -1,6 +1,6 @@
 ---
 name: integrate-project
-description: Integrate an existing codebase into the Codex workflow by creating `docs/{feature}/` scaffolding, legacy context, progress tracking, and initial gate status without disrupting the running project. Use when Codex needs to onboard a legacy repository, create minimal collaboration docs for an existing module, or support requests like “接入现有项目”, “把老项目纳入框架”, “建立 legacy 文档骨架”, or after completing `scan-project`.
+description: Integrate an existing codebase into the Codex workflow by creating minimal collaboration docs, legacy context, and gate scaffolding without disrupting the running system. Use when Codex is asked to onboard a legacy repository, build migration context, or answer requests like “接入现有项目”, “把这个老项目纳入框架”, “帮我整合这个 legacy repo”, “先给这个项目搭一层协作文档”, or “执行 integrate-project”.
 ---
 
 # Integrate Project
@@ -8,6 +8,13 @@ description: Integrate an existing codebase into the Codex workflow by creating 
 ## Overview
 
 将现有项目或现有模块渐进式纳入 Codex 框架，补齐最小协作文档骨架，同时保留 `legacy` 语义边界，避免把历史系统伪装成从零设计的新功能。
+
+## Trigger Examples
+
+- `接入这个现有项目`
+- `把这个老项目纳入框架`
+- `帮我整合这个 legacy repo`
+- `执行 integrate-project，level 先保守一点`
 
 ## Workflow
 

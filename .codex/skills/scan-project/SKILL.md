@@ -1,6 +1,6 @@
 ---
 name: scan-project
-description: Scan an existing project to identify its structure, modules, APIs, schema sources, and technology stack before integrating it into the framework. Use when Codex is asked to inspect a legacy or unfamiliar repository, reverse-engineer its shape, or prepare migration context.
+description: Scan an existing repository to detect its tech stack, module boundaries, API and schema signals, and migration readiness before integration. Use when Codex is asked to inspect a legacy project, reverse-engineer structure, or answer requests like “扫描项目结构”, “看看这个仓库是什么技术栈”, “帮我摸清这个老项目”, “先分析一下这个 repo”, or “执行 scan-project”.
 ---
 
 # Scan Project
@@ -8,6 +8,13 @@ description: Scan an existing project to identify its structure, modules, APIs, 
 ## Overview
 
 扫描项目结构、技术栈和关键模块，为整合或逆向分析做准备。
+
+## Trigger Examples
+
+- `扫描这个项目结构`
+- `看看这个仓库是什么技术栈`
+- `帮我摸清这个老项目`
+- `执行 scan-project，先做整体分析`
 
 ## Workflow
 

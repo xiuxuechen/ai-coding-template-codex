@@ -1,6 +1,6 @@
 ---
 name: check-progress
-description: Inspect feature progress from 90_PROGRESS_LOG.yaml and present either a detailed single-feature view or a global project overview. Use when Codex is asked to report current status, show progress across features, identify blockers, or answer requests like “查看进度”, “执行 check-progress”, “看看现在做到哪了”, or “给我一个全局进度概览”.
+description: Inspect detailed progress for a feature or provide a portfolio-wide overview using progress logs and task stats. Use when Codex is asked to check status, inspect blockers, or answer requests like “查看进度”, “看看现在做到哪了”, “给我一个全局进度概览”, “当前有哪些阻塞项”, or “执行 check-progress”.
 ---
 
 # Check Progress
@@ -8,6 +8,13 @@ description: Inspect feature progress from 90_PROGRESS_LOG.yaml and present eith
 ## Overview
 
 从 `90_PROGRESS_LOG.yaml` 提取进度、阶段状态和下一里程碑，输出单功能详情或全局概览。
+
+## Trigger Examples
+
+- `查看当前进度`
+- `给我一个全局进度概览`
+- `看看 user-auth 现在做到哪了`
+- `执行 check-progress，顺便列出阻塞项`
 
 ## Workflow
 

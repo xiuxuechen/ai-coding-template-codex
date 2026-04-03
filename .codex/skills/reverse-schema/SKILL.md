@@ -1,6 +1,6 @@
 ---
 name: reverse-schema
-description: Reverse-engineer data models, field constraints, and entity relationships from ORM, schema, or SQL definitions to produce a maintainable data model document. Use when Codex needs to generate schema docs from code, support legacy onboarding, or handle requests like “逆向数据模型”, “从 ORM 生成文档”, “补表结构说明”, or after `integrate-project`.
+description: Reverse-engineer data model documentation from ORM schemas, models, and migrations in an existing codebase. Use when Codex is asked to extract database or domain models or answer requests like “逆向数据模型”, “帮我整理现有表结构”, “从 ORM 里反推 schema”, “看看这个项目的数据模型”, or “执行 reverse-schema”.
 ---
 
 # Reverse Schema
@@ -8,6 +8,13 @@ description: Reverse-engineer data models, field constraints, and entity relatio
 ## Overview
 
 从 ORM、schema 或 migration 文件逆向提取数据模型和关系，输出可维护的数据模型文档，为 legacy 项目整合和后续文档同步提供基线。
+
+## Trigger Examples
+
+- `逆向这个项目的数据模型`
+- `帮我整理现有表结构`
+- `从 ORM 里反推 schema`
+- `执行 reverse-schema，带上关系说明`
 
 ## Workflow
 

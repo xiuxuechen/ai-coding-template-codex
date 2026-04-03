@@ -1,6 +1,6 @@
 ---
 name: release
-description: Prepare a release summary for a feature and version by collecting progress, test evidence, changelog entries, and delivery notes. Use when Codex is asked to create release notes, summarize a deliverable, or answer requests like “执行 release”, “生成发布说明”, “整理这个 feature 的版本发布内容”, or “为 v1.0.0 出一份 release note”.
+description: Prepare release notes and a release readiness summary for a feature and version by consolidating progress, test, and changelog artifacts. Use when Codex is asked to cut a release, prepare delivery notes, or answer requests like “生成发布说明”, “准备这个版本的 release note”, “帮我整理交付摘要”, “看看现在能不能发布”, or “执行 release”.
 ---
 
 # Release
@@ -8,6 +8,13 @@ description: Prepare a release summary for a feature and version by collecting p
 ## Overview
 
 汇总发布所需的进度、测试和变更信息，生成结构化发布说明。
+
+## Trigger Examples
+
+- `生成这个 feature 的发布说明`
+- `准备 v1.0.0 的 release note`
+- `帮我整理交付摘要`
+- `执行 release，检查发布准备状态`
 
 ## Workflow
 

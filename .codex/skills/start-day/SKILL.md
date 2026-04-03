@@ -1,6 +1,6 @@
 ---
 name: start-day
-description: Start the day by syncing the repository, restoring the most relevant feature context, and surfacing today's next actions. Use when Codex is asked to begin work for the day, resume current development, restore the latest checkpoint, or answer requests like “开始今天工作”, “执行 start-day”, “恢复今天要做的功能”, or “看看今天先做什么”.
+description: Start the work day by syncing the repository when appropriate, restoring the most relevant feature context, and surfacing today's next actions. Use when Codex is asked to begin work, resume the latest feature, restore today's context, or answer requests like “开始今天工作”, “帮我恢复今天要做的事情”, “看看今天先做什么”, “继续昨天做到一半的功能”, or “执行 start-day”.
 ---
 
 # Start Day
@@ -8,6 +8,13 @@ description: Start the day by syncing the repository, restoring the most relevan
 ## Overview
 
 在开始当天工作时，先完成代码同步判断、功能定位、上下文恢复和待办提取，再进入具体实现。
+
+## Trigger Examples
+
+- `开始今天工作，帮我恢复上下文`
+- `看看今天最应该先做什么`
+- `继续昨天那个 feature`
+- `执行 start-day，先同步再恢复状态`
 
 ## Workflow
 

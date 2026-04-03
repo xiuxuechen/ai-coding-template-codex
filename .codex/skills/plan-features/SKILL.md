@@ -1,6 +1,6 @@
 ---
 name: plan-features
-description: Generate a feature development order from foundation module decomposition documents, including dependencies, priorities, and sequencing constraints. Use when Codex is asked to plan feature rollout order, derive a feature checklist, or answer requests like “执行 plan-features”, “生成开发顺序”, “从模块拆分推导 feature 清单”, or “先规划一下 feature 排期”.
+description: Produce a feature development order and checklist from foundation module decomposition and dependency information. Use when Codex is asked to plan feature rollout, derive sequencing, or answer requests like “规划 feature 顺序”, “给我一个开发优先级列表”, “根据模块拆分生成开发顺序”, “先排一下这些功能怎么做”, or “执行 plan-features”.
 ---
 
 # Plan Features
@@ -8,6 +8,13 @@ description: Generate a feature development order from foundation module decompo
 ## Overview
 
 根据模块拆分和依赖关系生成可执行的 feature 开发顺序清单。
+
+## Trigger Examples
+
+- `规划一下 feature 顺序`
+- `给我一个开发优先级列表`
+- `根据模块拆分生成开发顺序`
+- `执行 plan-features，标出依赖关系`
 
 ## Workflow
 

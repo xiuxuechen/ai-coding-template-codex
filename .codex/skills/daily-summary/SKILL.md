@@ -1,6 +1,6 @@
 ---
 name: daily-summary
-description: Generate a daily work summary from one or more 90_PROGRESS_LOG.yaml files, including completed tasks, work in progress, blockers, and tomorrow's priorities. Use when Codex is asked to summarize today's work, create a daily report, consolidate progress across features, or answer requests like “生成每日总结”, “执行 daily-summary”, “汇总今天做了什么”, or “给我一份今日工作报告”.
+description: Generate a daily summary for one feature or across all active features by consolidating done, in-progress, and blocked items from progress logs. Use when Codex is asked for a daily recap, team update, or answer requests like “生成日报”, “汇总今天做了什么”, “给我一份今日工作总结”, “整理今天的完成项和阻塞项”, or “执行 daily-summary”.
 ---
 
 # Daily Summary
@@ -8,6 +8,13 @@ description: Generate a daily work summary from one or more 90_PROGRESS_LOG.yaml
 ## Overview
 
 根据今日更新过的进度日志生成单功能或全局每日总结，沉淀完成项、进行中、阻塞项和明日计划。
+
+## Trigger Examples
+
+- `生成今天的日报`
+- `汇总今天做了什么`
+- `给我一份今日工作总结`
+- `执行 daily-summary，按 feature 汇总`
 
 ## Workflow
 

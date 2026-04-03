@@ -1,6 +1,6 @@
 ---
 name: gen-demo
-description: Generate a lightweight demo flow or page for a feature so stakeholders can validate UI and interactions before full implementation. Use when Codex is asked to create a demo, prototype a flow, or answer requests like “生成 demo”, “先做个演示页面”, or “为这个 feature 快速出一个可演示版本”.
+description: Generate lightweight demo artifacts for a feature, including UI flow scaffolding and mock-backed interactions, before production implementation. Use when Codex is asked to make a demo or answer requests like “生成 Demo”, “先做个演示版”, “帮我出一个可交互的页面示意”, “给这个功能快速做个展示版”, or “执行 gen-demo”.
 ---
 
 # Gen Demo
@@ -8,6 +8,13 @@ description: Generate a lightweight demo flow or page for a feature so stakehold
 ## Overview
 
 为功能快速生成轻量级 Demo，用于验证交互和需求理解。
+
+## Trigger Examples
+
+- `生成这个功能的 Demo`
+- `先做个演示版`
+- `帮我出一个可交互的页面示意`
+- `执行 gen-demo，先用 mock 数据`
 
 ## Workflow
 

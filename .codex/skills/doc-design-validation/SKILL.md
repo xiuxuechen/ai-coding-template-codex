@@ -1,6 +1,6 @@
 ---
 name: doc-design-validation
-description: Validate foundation design documents by simulating user flows, system responsibilities, and state transitions to produce objective PASS, FAIL, or WARN findings. Use when Codex is asked to verify foundation docs, stress-test the design, or answer requests like “执行 doc-design-validation”, “验证基础设计文档”, or “看看 Foundation 文档有没有逻辑断层”.
+description: Validate foundation design documents by simulating flows, system responsibilities, and consistency, then report PASS, FAIL, or WARN evidence. Use when Codex is asked to validate phase-0 documents, stress-test the design, or answer requests like “验证 Foundation 设计”, “检查这些基础文档有没有断层”, “帮我跑一次文档设计验证”, “看看 Foundation 文档是否自洽”, or “执行 doc-design-validation”.
 ---
 
 # Doc Design Validation
@@ -8,6 +8,13 @@ description: Validate foundation design documents by simulating user flows, syst
 ## Overview
 
 用客观验证而不是主观评审的方式检查 Foundation 设计文档是否自洽、完整、可执行。
+
+## Trigger Examples
+
+- `验证 Foundation 设计`
+- `检查这些基础文档有没有断层`
+- `帮我跑一次文档设计验证`
+- `执行 doc-design-validation，给我 PASS/FAIL/WARN`
 
 ## Workflow
 

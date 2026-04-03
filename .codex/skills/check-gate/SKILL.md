@@ -1,6 +1,6 @@
 ---
 name: check-gate
-description: Inspect foundation or feature phase gate status, prerequisites, artifacts, and blockers before development can proceed. Use when Codex is asked to evaluate gate readiness, review phase status, identify missing artifacts, or answer requests like “检查 gate”, “执行 check-gate”, “看看 Phase 2 能不能过”, or “当前 Foundation Gate 状态如何”.
+description: Inspect foundation or feature phase gate status and explain passed, blocked, pending, or skipped conditions with evidence. Use when Codex is asked to check gate readiness, inspect blockers, or answer requests like “检查 gate”, “当前阶段能不能过”, “看看卡在哪了”, “Foundation Gate 现在什么状态”, or “执行 check-gate”.
 ---
 
 # Check Gate
@@ -8,6 +8,13 @@ description: Inspect foundation or feature phase gate status, prerequisites, art
 ## Overview
 
 检查 Foundation 或 feature Gate 的状态、阻塞项和缺失产物，判断是否具备继续推进条件。
+
+## Trigger Examples
+
+- `检查当前 gate 状态`
+- `看看 Phase 2 能不能过`
+- `Foundation Gate 现在什么状态`
+- `执行 check-gate，列出缺失项`
 
 ## Workflow
 

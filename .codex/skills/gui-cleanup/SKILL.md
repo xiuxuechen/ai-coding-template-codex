@@ -1,6 +1,6 @@
 ---
 name: gui-cleanup
-description: Clean up stale, zombie, or expired GUI sessions and explain what was removed or retained. Use when Codex is asked to clean GUI sessions, remove dead connections, or troubleshoot stale GUI bridge state.
+description: Scan GUI bridge session records and clean up stale, expired, or zombie sessions safely. Use when Codex is asked to clean invalid GUI sessions or answer requests like “清理 GUI Session”, “清理僵尸连接”, “帮我清掉过期的 GUI 会话”, or “执行 gui-cleanup”.
 ---
 
 # GUI Cleanup
@@ -8,6 +8,13 @@ description: Clean up stale, zombie, or expired GUI sessions and explain what wa
 ## Overview
 
 清理无效或过期的 GUI Session，恢复 GUI 会话列表的准确性。
+
+## Trigger Examples
+
+- `清理 GUI Session`
+- `清理僵尸连接`
+- `帮我清掉过期的 GUI 会话`
+- `执行 gui-cleanup`
 
 ## Workflow
 

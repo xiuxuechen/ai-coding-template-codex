@@ -1,6 +1,6 @@
 ---
 name: run-tests
-description: Execute relevant tests for a feature or the whole project, collect results, and summarize failures, coverage, and next actions. Use when Codex is asked to run tests, verify a feature, produce a test report, or answer requests like “执行 run-tests”, “帮我跑一下测试”, “验证这个 feature”, or “输出测试结果和结论”.
+description: Run tests for a feature or across the project, map the results into the framework reporting flow, and summarize failures, coverage, and next actions. Use when Codex is asked to execute tests, verify a feature, or answer requests like “跑一下测试”, “帮我验证这个 feature”, “看看测试结果”, “输出测试报告和结论”, or “执行 run-tests”.
 ---
 
 # Run Tests
@@ -8,6 +8,13 @@ description: Execute relevant tests for a feature or the whole project, collect 
 ## Overview
 
 按 feature 或项目范围执行测试，收集结果并产出可追踪的测试摘要。
+
+## Trigger Examples
+
+- `跑一下这个 feature 的测试`
+- `帮我验证 user-auth`
+- `看看测试结果并总结问题`
+- `执行 run-tests，顺便给我测试结论`
 
 ## Workflow
 
