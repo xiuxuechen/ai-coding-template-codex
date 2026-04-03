@@ -63,6 +63,7 @@
 Foundation Gate 至少检查：
 - `docs/_foundation/FOUNDATION_GATE_STATUS.yaml`
 - 规划文档目录及关键文件
+- 其中包括 `docs/_foundation/_planning/06_CODE_STANDARDS.md`
 
 Feature Gate 至少检查：
 - `docs/{feature}/PHASE_GATE.yaml`
@@ -91,6 +92,10 @@ Feature Gate 至少检查：
 - 必需产出物
 - 质量检查项
 - 审批状态
+
+Foundation Gate 额外建议重点检查：
+- `06_CODE_STANDARDS.md` 是否存在
+- 是否已定义命名、一致性、测试、Review 约束
 
 输出状态建议保持以下枚举：
 - `passed`

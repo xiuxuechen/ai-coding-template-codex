@@ -61,6 +61,8 @@ foundation_checks:
       - docs/_foundation/_planning/02_ARCHITECTURE.md
       - docs/_foundation/_planning/03_MODULE_DECOMPOSITION.md
       - docs/_foundation/_planning/04_ROADMAP.md
+      - docs/_foundation/_planning/05_TECH_DECISIONS.md
+      - docs/_foundation/_planning/06_CODE_STANDARDS.md
     severity: block
 
   - id: user_journey_filled
@@ -82,6 +84,11 @@ foundation_checks:
     description: "路线图必须定义里程碑"
     check: 04_ROADMAP.md 包含 M0/M1 等里程碑定义
     severity: warn
+
+  - id: code_standards_defined
+    description: "代码规范文档必须定义命名、变更、测试和 Review 约束"
+    check: 06_CODE_STANDARDS.md 包含命名规范、测试要求、Review 约束等核心章节
+    severity: block
 
 跳转到 Step 6a 输出 Foundation 结果
 ```
@@ -169,12 +176,14 @@ Gate 检查流程：
   {✅|❌} _planning/03_MODULE_DECOMPOSITION.md
   {✅|❌} _planning/04_ROADMAP.md
   {✅|❌} _planning/05_TECH_DECISIONS.md
+  {✅|❌} _planning/06_CODE_STANDARDS.md
 
 📊 质量检查:
   {✅|❌} user_journey_filled - 用户旅程已填写
   {✅|❌} architecture_filled - 架构文档已填写
   {✅|❌} module_decomposition_filled - 模块划分已定义
   {✅|⚠️} roadmap_has_milestones - 里程碑已定义
+  {✅|❌} code_standards_defined - 项目代码规范已定义
 
 ✍️ 审批状态:
   {✅|⏳} PM: {user} ({datetime})
@@ -286,12 +295,14 @@ Phase 7 (Deploy):   {状态图标} {状态文字}
   ❌ _planning/03_MODULE_DECOMPOSITION.md (未填写)
   ✅ _planning/04_ROADMAP.md
   ✅ _planning/05_TECH_DECISIONS.md
+  ❌ _planning/06_CODE_STANDARDS.md
 
 📊 质量检查:
   ✅ user_journey_filled - 用户旅程已填写
   ✅ architecture_filled - 架构文档已填写
   ❌ module_decomposition_filled - 模块划分未定义
   ✅ roadmap_has_milestones - 里程碑已定义
+  ❌ code_standards_defined - 项目代码规范未定义
 
 ✍️ 审批状态:
   ⏳ PM: 待审批
@@ -299,11 +310,13 @@ Phase 7 (Deploy):   {状态图标} {状态文字}
 
 🚫 阻断原因:
   1. 03_MODULE_DECOMPOSITION.md 未填写功能模块列表
+  2. 06_CODE_STANDARDS.md 缺失或未定义项目级编码约束
 
 📝 建议操作:
   1. 填写 docs/_foundation/_planning/03_MODULE_DECOMPOSITION.md
-  2. 定义功能模块列表（module_id, feature_name, scope 等）
-  3. 执行 /approve-gate --phase=0 --role=PM
+  2. 创建并填写 docs/_foundation/_planning/06_CODE_STANDARDS.md
+  3. 定义功能模块列表（module_id, feature_name, scope 等）
+  4. 执行 /approve-gate --phase=0 --role=PM
 ```
 
 ### 示例 2：Foundation Gate 通过
@@ -325,12 +338,14 @@ Phase 7 (Deploy):   {状态图标} {状态文字}
   ✅ _planning/03_MODULE_DECOMPOSITION.md
   ✅ _planning/04_ROADMAP.md
   ✅ _planning/05_TECH_DECISIONS.md
+  ✅ _planning/06_CODE_STANDARDS.md
 
 📊 质量检查:
   ✅ user_journey_filled - 用户旅程已填写
   ✅ architecture_filled - 架构文档已填写
   ✅ module_decomposition_filled - 模块划分已定义
   ✅ roadmap_has_milestones - 里程碑已定义
+  ✅ code_standards_defined - 项目代码规范已定义
 
 ✍️ 审批状态:
   ✅ PM: alice (2024-12-15T13:00:00)

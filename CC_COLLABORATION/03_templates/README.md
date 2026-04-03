@@ -47,6 +47,7 @@
 | `03_MODULE_DECOMPOSITION_TEMPLATE.md` | `docs/_foundation/03_MODULE_DECOMPOSITION.md` | 模块分解与依赖 |
 | `04_ROADMAP_TEMPLATE.md` | `docs/_foundation/04_ROADMAP.md` | 开发路线图 |
 | `05_TECH_DECISIONS_TEMPLATE.md` | `docs/_foundation/05_TECH_DECISIONS.md` | 技术决策记录 |
+| `06_CODE_STANDARDS.md` | `docs/_foundation/_planning/06_CODE_STANDARDS.md` | 项目级代码规范 |
 | `_api_system_template/` | `docs/_foundation/_api_system/` | API 规范体系 |
 | `_ui_system_template/` | `docs/_foundation/_ui_system/` | UI 规范体系 |
 
