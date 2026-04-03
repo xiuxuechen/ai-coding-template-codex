@@ -1,0 +1,6 @@
+interface:
+  display_name: "Start Day"
+  short_description: "恢复今日开发上下文并整理第一优先动作"
+  default_prompt: "Use $start-day to sync the repo when appropriate, recover the most relevant feature context, and summarize today's next actions."
+policy:
+  allow_implicit_invocation: true

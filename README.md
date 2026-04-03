@@ -1,4 +1,4 @@
-# AI Coding Template Codex Edition
+﻿# AI Coding Template Codex Edition
 
 > 面向 Codex 的 AI 协作开发框架模板
 
@@ -94,7 +94,7 @@ my-project/
 
 ## 4. Repo-level Skills
 
-当前仓库内置 29 个 Codex skills：
+当前仓库内置 30 个 Codex skills：
 
 - `doc-generator`
 - `review-alignment`
@@ -125,6 +125,7 @@ my-project/
 - `sync-docs`
 - `template-consumption`
 - `workflow-reference-preservation`
+- `start-day`
 
 源码目录：
 - `.codex/skills/`
@@ -161,3 +162,5 @@ MIT
 - 本仓库不是完全从零原创实现，而是基于上游项目的结构迁移与二次改造版本。
 - 当前保留来源说明，是为了清晰区分上游原始内容与本仓库新增改造内容。
 - 虽然上游 README 末尾已写明 `MIT`，但目前未看到单独的 `LICENSE` 根文件，因此这里继续保留来源与改造说明。
+
+
