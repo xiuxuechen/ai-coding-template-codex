@@ -1,0 +1,6 @@
+interface:
+  display_name: "Context Writer"
+  short_description: "把自然语言需求整理成标准的 10_CONTEXT 文档"
+  default_prompt: "Use $context-writer to turn a natural-language feature request into a structured 10_CONTEXT.md before drafting specs or implementation."
+policy:
+  allow_implicit_invocation: true

@@ -74,7 +74,7 @@ git commit -m "feat(auth): 实现登录表单验证逻辑
 - 错误提示显示
 - 提交按钮状态控制
 
-Co-Authored-By: Claude <noreply@anthropic.com>"
+Co-Authored-By: Codex <noreply@anthropic.com>"
 
 # 推送
 git push origin {branch}
@@ -180,7 +180,7 @@ next_step: "登录"      # 不够具体
 
 <body>
 
-Co-Authored-By: Claude <noreply@anthropic.com>
+Co-Authored-By: Codex <noreply@anthropic.com>
 ```
 
 ### 5.2 常用 Type
@@ -205,7 +205,7 @@ git commit -m "feat(auth): 实现登录表单验证逻辑
 - 密码长度验证 (6-20字符)
 - 表单提交防重复点击
 
-Co-Authored-By: Claude <noreply@anthropic.com>"
+Co-Authored-By: Codex <noreply@anthropic.com>"
 ```
 
 ---

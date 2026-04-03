@@ -1,0 +1,6 @@
+interface:
+  display_name: "Changelog Updater"
+  short_description: "更新文档变更日志，记录 context/spec/design 的版本化修改"
+  default_prompt: "Use $changelog-updater to append the latest versioned change entry to the appropriate changelog file."
+policy:
+  allow_implicit_invocation: true

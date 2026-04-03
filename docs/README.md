@@ -56,10 +56,10 @@ docs/
 
 ## 创建新功能
 
-使用 Claude Code 命令快速创建功能目录：
+使用 Codex 命令快速创建功能目录：
 
 ```bash
-# 在 Claude Code 中执行
+# 在 Codex 中执行
 /new-feature my-feature-name
 ```
 

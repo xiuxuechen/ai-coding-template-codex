@@ -156,7 +156,7 @@
 
 ### 2.1 为什么需要上下文恢复？
 
-Claude 的对话有 context window 限制，当对话过长时会被压缩（compact），导致：
+Codex 的对话有 context window 限制，当对话过长时会被压缩（compact），导致：
 - 忘记之前讨论的内容
 - 不知道当前进度
 - 重复提问或重复工作
@@ -216,7 +216,7 @@ cc_checkpoint:
 | 新对话开始 | **是** | 新对话没有任何上下文 |
 | 对话被 compact | **是** | 历史信息被压缩 |
 | 切换到另一个功能 | **是** | 需要加载不同功能的上下文 |
-| 感觉 Claude 忘了什么 | **是** | 主动恢复上下文 |
+| 感觉 Codex 忘了什么 | **是** | 主动恢复上下文 |
 | 同一对话内继续工作 | 否 | 上下文还在 |
 
 ---
@@ -398,7 +398,7 @@ Phase N 开发完成
 # 立即执行恢复
 /iresume user-auth
 
-# Claude 会自动读取：
+# Codex 会自动读取：
 # - PROGRESS_LOG（进度）
 # - cc_checkpoint（断点）
 # - context_files（相关文档）

@@ -434,7 +434,7 @@ def compute_ready_set(features):
 💡 操作步骤
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. 打开新的 Claude Code CLI 终端
+1. 打开新的 Codex CLI 终端
 2. 复制上述命令执行
 3. 完成后执行 /project-pm check 检查进度
 

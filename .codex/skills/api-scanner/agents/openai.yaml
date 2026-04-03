@@ -1,0 +1,6 @@
+interface:
+  display_name: "API Scanner"
+  short_description: "扫描项目路由、端点与处理器，提取结构化 API 清单"
+  default_prompt: "Use $api-scanner to scan this codebase and extract a structured list of API endpoints, handlers, and route details."
+policy:
+  allow_implicit_invocation: true

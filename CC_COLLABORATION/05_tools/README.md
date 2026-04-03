@@ -23,7 +23,7 @@
 | 类型 | 数量 | 说明 |
 |------|------|------|
 | **Slash Commands** | 25 | 用户显式调用的命令（`/xxx`） |
-| **Skills** | 6 | Claude 自动判断何时应用的能力 |
+| **Skills** | 6 | Codex 自动判断何时应用的能力 |
 | **Subagents** | 5 | 独立执行复杂任务的子代理 |
 | **总计** | **36** | |
 
@@ -32,7 +32,7 @@
 | 类型 | 触发方式 | 特点 |
 |------|----------|------|
 | **Slash Commands** | 用户显式输入 `/xxx` | 入口统一，功能丰富 |
-| **Skills** | Claude 自动匹配触发 | 无需用户调用，根据对话内容自动应用 |
+| **Skills** | Codex 自动匹配触发 | 无需用户调用，根据对话内容自动应用 |
 | **Subagents** | 通过 Task tool 调用 | 独立上下文，适合研究型任务 |
 
 ---
@@ -112,9 +112,9 @@
 
 ## Skills（6 个）
 
-> **Skills 是 Claude 自动判断何时应用的能力**，不需要用户显式调用。
+> **Skills 是 Codex 自动判断何时应用的能力**，不需要用户显式调用。
 >
-> 与 Slash Commands 不同，Skills 通过自然语言描述匹配来触发。当用户的需求符合某个 Skill 的触发条件时，Claude 会自动应用该 Skill。
+> 与 Slash Commands 不同，Skills 通过自然语言描述匹配来触发。当用户的需求符合某个 Skill 的触发条件时，Codex 会自动应用该 Skill。
 
 | Skill | 触发条件 | 用途 |
 |-------|----------|------|
@@ -127,7 +127,7 @@
 
 **为什么精简到 5 个？**
 
-之前的 15 个 Skills 中，大部分实际是「被 Command 调用的内部逻辑」，而非「Claude 自动触发的能力」。根据 Claude Code 官方定义，这些内部逻辑已合并到对应的 Slash Commands 中：
+之前的 15 个 Skills 中，大部分实际是「被 Command 调用的内部逻辑」，而非「Codex 自动触发的能力」。根据 Codex 官方定义，这些内部逻辑已合并到对应的 Slash Commands 中：
 
 - `gate_checker` → 合并到 `/check-gate`
 - `progress_updater` → 合并到 `/check-progress`, `/end-day`
@@ -223,9 +223,9 @@ Phase 7 Deploy        → /release, release_summarizer (subagent)
 
 ### 2. 实现工具
 
-- **Slash Commands**: 在 `.claude/commands/` 创建对应文件
-- **Skills**: 在 `.claude/skills/` 创建对应文件
-- **Subagents**: 在 `.claude/subagents/` 创建对应文件
+- **Slash Commands**: 在 `.codex/commands/` 创建对应文件
+- **Skills**: 在 `.codex/skill-specs/` 创建对应文件
+- **Subagents**: 在 `.codex/subagents/` 创建对应文件
 
 ### 3. 更新文档
 

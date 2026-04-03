@@ -1,0 +1,6 @@
+interface:
+  display_name: "Integrate Project"
+  short_description: "把现有项目渐进式纳入 Codex 框架，补齐 legacy 协作文档骨架"
+  default_prompt: "Use $integrate-project to bring this existing project into the Codex workflow with legacy context, progress tracking, and initial gate files."
+policy:
+  allow_implicit_invocation: true

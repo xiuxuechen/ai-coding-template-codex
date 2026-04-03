@@ -1,0 +1,6 @@
+interface:
+  display_name: "Contract Resolver"
+  short_description: "查询真实接口契约、字段名和类型，避免 AI 猜字段"
+  default_prompt: "Use $contract-resolver to resolve the real contract for an entity or endpoint before generating code or mock data."
+policy:
+  allow_implicit_invocation: true

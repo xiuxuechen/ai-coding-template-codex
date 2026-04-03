@@ -357,5 +357,5 @@ Foundation Gate 通过后：
 
 | 版本 | 日期 | 作者 | 变更内容 |
 |------|------|------|----------|
-| v1.1 | 2025-01-02 | claude-code | 新增 User Journey 层：01_USER_JOURNEY.md MVS、7 项 BLOCK 级检查、设计验证要求 |
+| v1.1 | 2025-01-02 | codex | 新增 User Journey 层：01_USER_JOURNEY.md MVS、7 项 BLOCK 级检查、设计验证要求 |
 | v1.0 | {date} | {author} | 初始版本 |

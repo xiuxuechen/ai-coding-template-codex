@@ -1,0 +1,6 @@
+interface:
+  display_name: "Test Runner"
+  short_description: "执行 UI、API 和单元测试并整理失败级别与回归信息"
+  default_prompt: "Use $test-runner to execute the feature's test plan and capture structured results."
+policy:
+  allow_implicit_invocation: true

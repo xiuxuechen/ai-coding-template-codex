@@ -438,7 +438,7 @@ cleanup:
 
 ---
 
-## 8. Claude Code 执行指南
+## 8. Codex 执行指南
 
 ### 8.1 使用 Chrome MCP 测试
 

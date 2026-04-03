@@ -1,0 +1,6 @@
+interface:
+  display_name: "Template Consumption"
+  short_description: "按 workflow 选择并消费框架模板，保留结构、路径和关键字段约定"
+  default_prompt: "Use $template-consumption to select the right framework templates, map them to target files, and preserve required structure without unsafe overwrites."
+policy:
+  allow_implicit_invocation: true

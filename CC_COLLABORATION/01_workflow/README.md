@@ -111,4 +111,4 @@ Phase 0 (Foundation) → Phase 0.5 (User Journey) → Phase 1-7 (功能开发循
 
 ---
 
-_Generated with Claude Code_
+_Generated for Codex_

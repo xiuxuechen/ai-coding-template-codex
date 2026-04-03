@@ -309,7 +309,7 @@ phase_1_kickoff:
 # Phase 2-7 使用模板默认值（pending 状态）
 # ...
 
-# Claude Code 断点恢复信息
+# Codex 断点恢复信息
 cc_checkpoint:
   session_id: "cc-{current_date}-{feature-name}"
   last_file_edited: "docs/{feature-name}/10_CONTEXT.md"

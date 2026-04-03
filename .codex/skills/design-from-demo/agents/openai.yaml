@@ -1,0 +1,6 @@
+interface:
+  display_name: "Design From Demo"
+  short_description: "从 Demo、Mock 与评审记录反推正式 API 与设计文档草稿"
+  default_prompt: "Use $design-from-demo to extract formal API and design docs from demo and mock artifacts."
+policy:
+  allow_implicit_invocation: true

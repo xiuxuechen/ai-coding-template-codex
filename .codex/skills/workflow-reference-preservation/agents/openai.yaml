@@ -1,0 +1,6 @@
+interface:
+  display_name: "Workflow Reference Preservation"
+  short_description: "按场景加载 workflow reference，保留原框架术语、阶段模型和 Gate 语义"
+  default_prompt: "Use $workflow-reference-preservation to load the right workflow references and map original framework concepts to current Codex playbooks and skills."
+policy:
+  allow_implicit_invocation: true

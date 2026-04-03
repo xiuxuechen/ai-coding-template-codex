@@ -1,0 +1,6 @@
+interface:
+  display_name: "Schema Generator"
+  short_description: "根据设计文档生成数据库 Schema 与迁移草稿"
+  default_prompt: "Use $schema-generator to generate database schema files from the finalized design model before implementation or database migration work."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Mock API Generator"
+  short_description: "为 Demo、联调和并行开发生成结构一致的 Mock API 与数据"
+  default_prompt: "Use $mock-api-generator to create mock data and handlers that match the expected API contract."
+policy:
+  allow_implicit_invocation: true

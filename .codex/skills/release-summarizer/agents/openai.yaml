@@ -1,0 +1,6 @@
+interface:
+  display_name: "Release Summarizer"
+  short_description: "汇总进度、测试和 CHANGELOG，生成结构化发布说明"
+  default_prompt: "Use $release-summarizer to generate a structured 70_RELEASE_NOTE.md from progress logs, test reports, changelogs, and feature context."
+policy:
+  allow_implicit_invocation: true

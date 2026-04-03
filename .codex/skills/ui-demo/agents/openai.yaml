@@ -1,0 +1,6 @@
+interface:
+  display_name: "UI Demo"
+  short_description: "快速生成可查看、可交互、可讨论的页面 Demo 与原型"
+  default_prompt: "Use $ui-demo to build a lightweight interactive demo from UI requirements or a UI flow spec."
+policy:
+  allow_implicit_invocation: true

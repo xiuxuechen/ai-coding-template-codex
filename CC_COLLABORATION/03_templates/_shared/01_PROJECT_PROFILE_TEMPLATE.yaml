@@ -52,7 +52,7 @@ backend:
 
 # ============ AI 协作配置 ============
 ai_collaboration:
-  uses_claude_code: true
+  uses_codex: true
   uses_other_ai:
     - "gpt-4"                             # 可选的其他 AI 工具
 
@@ -155,7 +155,7 @@ rules:
   - "每日工作结束前必须更新 PROGRESS_LOG"
   - "新功能模块必须使用 /new-feature 命令初始化"
   - "上下文压缩后必须执行 /iresume 恢复"
-  - "Claude Code 必须遵守 CC_COLLABORATION/ 下的所有规范"
+  - "Codex 必须遵守 CC_COLLABORATION/ 下的所有规范"
 
 # ============ 环境配置 ============
 environments:

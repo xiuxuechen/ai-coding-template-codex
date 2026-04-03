@@ -1,0 +1,6 @@
+interface:
+  display_name: "Reverse Schema"
+  short_description: "从 ORM、Schema 或 SQL 逆向提取数据模型与关系文档"
+  default_prompt: "Use $reverse-schema to reverse-engineer ORM or schema definitions into a structured data model document with source references and uncertainty notes."
+policy:
+  allow_implicit_invocation: true

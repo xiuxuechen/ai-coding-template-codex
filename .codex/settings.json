@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CODEX_PROJECT_DIR/.codex/hooks/check-gui-cmd.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

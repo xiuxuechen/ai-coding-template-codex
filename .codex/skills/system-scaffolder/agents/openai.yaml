@@ -1,0 +1,6 @@
+interface:
+  display_name: "System Scaffolder"
+  short_description: "根据 PROJECT_PROFILE 生成项目目录结构与 Foundation 脚手架"
+  default_prompt: "Use $system-scaffolder to generate the project directory skeleton and Foundation files from PROJECT_PROFILE before starting a new feature or bootstrap phase."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "OpenAI Expert Review"
+  short_description: "调用 OpenAI API 执行外部评审 runner，返回原始评审结果"
+  default_prompt: "Use $openai-expert-review to call the OpenAI review runner and return the raw response for a prepared expert-review prompt."
+policy:
+  allow_implicit_invocation: true

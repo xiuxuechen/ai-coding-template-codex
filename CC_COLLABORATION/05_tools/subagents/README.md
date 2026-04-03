@@ -8,7 +8,7 @@
 
 ## 概述
 
-Subagents 是 Claude Code 的子代理模块，用于处理复杂的多步骤任务。每个 Subagent 定义一个完整的工作流程，可以调用多个 Skills 来完成任务。
+Subagents 是 Codex 的子代理模块，用于处理复杂的多步骤任务。每个 Subagent 定义一个完整的工作流程，可以调用多个 Skills 来完成任务。
 
 **与其他工具的区别**：
 - **Slash Commands**：用户直接调用的命令，触发单个操作

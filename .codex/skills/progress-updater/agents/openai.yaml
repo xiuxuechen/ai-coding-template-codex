@@ -1,0 +1,6 @@
+interface:
+  display_name: "Progress Updater"
+  short_description: "更新 90_PROGRESS_LOG、断点信息和任务状态，保持进度可恢复"
+  default_prompt: "Use $progress-updater to update the progress log, checkpoint, and task status for the current feature."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review Alignment"
+  short_description: "生成实现代码与设计文档、接口契约的对齐检查报告"
+  default_prompt: "Use $review-alignment to compare implementation against design docs and report mismatches before delivery."
+policy:
+  allow_implicit_invocation: true

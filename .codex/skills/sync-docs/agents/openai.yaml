@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sync Docs"
+  short_description: "检查文档与代码是否漂移，输出差异报告并支持低风险同步"
+  default_prompt: "Use $sync-docs to compare code and documentation for API, schema, and module drift, then produce a conservative synchronization report."
+policy:
+  allow_implicit_invocation: true

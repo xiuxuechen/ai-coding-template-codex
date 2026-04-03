@@ -8,7 +8,7 @@
 
 ## 概述
 
-Slash Commands 是用户直接调用的命令，通过 `/xxx` 格式触发。每个命令对应一个具体的操作，实现文件位于 `.claude/commands/` 目录。
+Slash Commands 是用户直接调用的命令，通过 `/xxx` 格式触发。每个命令对应一个具体的操作，实现文件位于 `.codex/commands/` 目录。
 
 **与其他工具的区别**：
 - **Slash Commands**：用户显式调用，如 `/new-feature user-auth`

@@ -526,7 +526,7 @@ app.use((err, req, res, next) => {
 
 ---
 
-## 11. Claude Code 执行指南
+## 11. Codex 执行指南
 
 ### 11.1 实现顺序
 

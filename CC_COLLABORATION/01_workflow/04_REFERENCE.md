@@ -302,7 +302,7 @@ feat(dashboard): 添加项目进度追踪功能
 Closes #45
 Refs #32
 
-Co-Authored-By: Claude <noreply@anthropic.com>
+Co-Authored-By: Codex <noreply@anthropic.com>
 EOF
 )"
 ```
@@ -329,7 +329,7 @@ After:
 2. 将 response.user 改为 response.data
 ```
 
-### A.7 Claude Code 提交
+### A.7 Codex 提交
 
 ```bash
 feat(user): 添加用户列表分页功能
@@ -339,7 +339,7 @@ feat(user): 添加用户列表分页功能
 - 页码跳转
 - 总数显示
 
-Co-Authored-By: Claude <noreply@anthropic.com>
+Co-Authored-By: Codex <noreply@anthropic.com>
 ```
 
 ### A.8 Type 速查表

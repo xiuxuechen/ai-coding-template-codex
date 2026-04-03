@@ -239,7 +239,7 @@ Phase 1-7 (Feature) - 功能级别
 
 ### Changed
 
-- **命令重命名** - `/resume` → `/iresume`，避免与 Claude Code 内置命令冲突
+- **命令重命名** - `/resume` → `/iresume`，避免与 Codex 内置命令冲突
 - **README 简化** - 移除开头重复的命令行示例
 - **README 增强** - 添加「真实工作流：从定义到现场交付」章节
 
@@ -285,8 +285,8 @@ Phase 1-7 (Feature) - 功能级别
 
 ### Added
 
-- **Claude Code 工具库** - 10 个 Slash Commands
-- **安装脚本** - `init-claude-tools.sh`
+- **Codex 工具库** - 10 个 Slash Commands
+- **安装脚本** - `init-codex-tools.sh`
 - **功能模板** - Context、Spec、Design、Test 等标准模板
 
 ### Changed
@@ -319,8 +319,8 @@ Phase 1-7 (Feature) - 功能级别
 
 - [HA Loop Desk](https://github.com/oowanghuan/ha-loop-desk) - 可视化工作台
 - [开源模板仓库](https://github.com/oowanghuan/ai-coding-template)
-- [Claude Code 官方文档](https://docs.anthropic.com/claude-code)
+- [Codex 官方文档](https://docs.anthropic.com/codex)
 
 ---
 
-_🤖 Generated with Claude Code_
+_Generated for Codex_

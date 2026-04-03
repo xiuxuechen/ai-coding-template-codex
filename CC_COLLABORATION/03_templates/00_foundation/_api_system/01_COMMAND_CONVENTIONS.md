@@ -3,7 +3,7 @@
 
 > 版本：v1.0
 > 最后更新：{timestamp}
-> 适用范围：所有 Claude Code Slash Command 定义
+> 适用范围：所有 Codex Slash Command 定义
 
 ---
 
@@ -13,7 +13,7 @@
 - 命令命名一致性
 - 参数格式标准化
 - 输出行为可预测
-- 便于 Claude Code 理解和执行
+- 便于 Codex 理解和执行
 
 ---
 
@@ -122,7 +122,7 @@
 ### 3.2 文件位置
 
 ```
-.claude/
+.codex/
   commands/
     {command-name}.md      # 命令定义文件
 ```
@@ -270,7 +270,7 @@
 
 ---
 
-## 9. Claude Code 使用指南
+## 9. Codex 使用指南
 
 ### 9.1 生成命令时的检查清单
 

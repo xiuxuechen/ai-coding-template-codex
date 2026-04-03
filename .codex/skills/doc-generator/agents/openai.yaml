@@ -1,0 +1,6 @@
+interface:
+  display_name: "Doc Generator"
+  short_description: "按模板生成 CONTEXT、SPEC、DESIGN 等标准文档"
+  default_prompt: "Use $doc-generator to create a structured project document from current feature context and available templates."
+policy:
+  allow_implicit_invocation: true

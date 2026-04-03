@@ -1,0 +1,6 @@
+interface:
+  display_name: "Spec Validator"
+  short_description: "检查 API / UI 规格完整性、一致性和可执行性"
+  default_prompt: "Use $spec-validator to validate the feature's API and UI specs before implementation or gate review."
+policy:
+  allow_implicit_invocation: true

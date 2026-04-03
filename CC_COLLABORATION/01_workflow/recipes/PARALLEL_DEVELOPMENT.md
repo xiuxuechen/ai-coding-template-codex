@@ -7,7 +7,7 @@
 ## 适用场景
 
 - 项目有多个独立或有依赖关系的 Feature
-- 需要多个 Claude Code CLI 会话并行工作
+- 需要多个 Codex CLI 会话并行工作
 - 需要追踪多 Feature 整体进度
 
 ---
@@ -130,7 +130,7 @@ Human> /project-pm assign
 └─────────────────────────────────────────────────────────────┘
 
 💡 操作步骤
-1. 打开新的 Claude Code CLI 终端
+1. 打开新的 Codex CLI 终端
 2. 复制上述命令执行
 3. 完成后执行 /project-pm check 检查进度
 ```
@@ -142,7 +142,7 @@ Human> /project-pm assign
 **终端 1**：
 ```bash
 cd /path/to/project
-claude
+codex
 
 Human> /ai-pm start user-auth --mode=full_auto --from-phase=1
 ```
@@ -150,7 +150,7 @@ Human> /ai-pm start user-auth --mode=full_auto --from-phase=1
 **终端 2**：
 ```bash
 cd /path/to/project
-claude
+codex
 
 Human> /ai-pm start config-service --mode=full_auto --from-phase=1
 ```
@@ -272,4 +272,4 @@ Human> /ai-pm skip user-auth --reason="..." --approver="@pm"
 
 ---
 
-_Generated with Claude Code_
+_Generated for Codex_

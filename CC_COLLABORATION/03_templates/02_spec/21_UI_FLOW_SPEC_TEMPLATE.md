@@ -287,7 +287,7 @@ flowchart TD
 
 ---
 
-## 7. Claude Code 执行指南
+## 7. Codex 执行指南
 
 ### 7.1 实现检查清单
 

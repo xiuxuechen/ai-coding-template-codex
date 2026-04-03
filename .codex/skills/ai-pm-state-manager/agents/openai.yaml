@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI PM State Manager"
+  short_description: "管理 AI PM 控制态的读写、校验与恢复，保持状态与执行事实分离"
+  default_prompt: "Use $ai-pm-state-manager to read, validate, write, or restore AI PM orchestration state while keeping control state separate from execution facts."
+policy:
+  allow_implicit_invocation: true

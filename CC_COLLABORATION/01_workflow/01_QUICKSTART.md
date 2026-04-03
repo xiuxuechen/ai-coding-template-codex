@@ -72,7 +72,7 @@
 ### Step 1: 初始化项目
 
 ```bash
-# 在 Claude Code 中执行
+# 在 Codex 中执行
 /init-project
 ```
 
@@ -101,7 +101,7 @@
 
 ## 遇到问题怎么办？
 
-### 对话太长，Claude 忘记上下文了
+### 对话太长，Codex 忘记上下文了
 
 ```bash
 /iresume user-auth

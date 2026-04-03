@@ -13,7 +13,7 @@
 - API 调用安全可控
 - 错误处理标准化
 - 重试机制一致
-- 便于 Claude Code 生成符合规范的调用代码
+- 便于 Codex 生成符合规范的调用代码
 
 ---
 
@@ -23,7 +23,7 @@
 
 | 类型 | 描述 | 示例 |
 |------|------|------|
-| AI 服务 | LLM、图像生成等 AI 能力 | OpenAI, Claude, Gemini |
+| AI 服务 | LLM、图像生成等 AI 能力 | OpenAI, Codex, Gemini |
 | 基础设施 | 云服务、存储、CDN | AWS, Supabase, Vercel |
 | 第三方业务 | 支付、通知、认证 | Stripe, SendGrid, Auth0 |
 | 数据服务 | 数据查询、分析 | Elasticsearch, Analytics |
@@ -413,7 +413,7 @@ alerts:
 
 ---
 
-## 10. Claude Code 使用指南
+## 10. Codex 使用指南
 
 ### 10.1 生成 API 调用代码时的检查清单
 

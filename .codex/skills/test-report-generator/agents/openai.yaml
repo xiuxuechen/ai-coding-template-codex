@@ -1,0 +1,6 @@
+interface:
+  display_name: "Test Report Generator"
+  short_description: "汇总测试结果并生成 61_TEST_REPORT.md 测试报告"
+  default_prompt: "Use $test-report-generator to turn test results into a structured report for review and release."
+policy:
+  allow_implicit_invocation: true

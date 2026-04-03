@@ -1,0 +1,6 @@
+interface:
+  display_name: "Schema Scanner"
+  short_description: "扫描 ORM 与 schema 定义，提取模型、字段与关系图数据"
+  default_prompt: "Use $schema-scanner to scan this project and extract structured schema, model, and relation information."
+policy:
+  allow_implicit_invocation: true

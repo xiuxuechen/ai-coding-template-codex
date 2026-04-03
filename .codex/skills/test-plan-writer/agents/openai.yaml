@@ -1,0 +1,6 @@
+interface:
+  display_name: "Test Plan Writer"
+  short_description: "根据 SPEC 生成结构化测试计划和可执行测试用例"
+  default_prompt: "Use $test-plan-writer to create a structured 60_TEST_PLAN.md from the current UI/API specifications and feature context."
+policy:
+  allow_implicit_invocation: true

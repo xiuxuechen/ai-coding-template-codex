@@ -1,0 +1,6 @@
+interface:
+  display_name: "Gate Checker"
+  short_description: "检查 Phase Gate 通过条件、阻断项和审批状态，判断是否可进入下一阶段"
+  default_prompt: "Use $gate-checker to evaluate whether this feature and phase are ready to pass the gate, and list any blockers or missing approvals."
+policy:
+  allow_implicit_invocation: true

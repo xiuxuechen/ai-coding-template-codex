@@ -1,0 +1,6 @@
+interface:
+  display_name: "Module Scanner"
+  short_description: "扫描目录结构、模块边界和分层组织，提取结构化模块清单"
+  default_prompt: "Use $module-scanner to analyze this repository structure and extract a structured module inventory, package layout, and architecture hints."
+policy:
+  allow_implicit_invocation: true
