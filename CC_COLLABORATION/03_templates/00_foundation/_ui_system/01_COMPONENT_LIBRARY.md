@@ -54,4 +54,4 @@
 
 ---
 
-_从 01_COMPONENT_LIBRARY_TEMPLATE.md 生成_
+_从 01_COMPONENT_LIBRARY.md 模板生成_

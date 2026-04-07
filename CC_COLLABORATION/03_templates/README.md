@@ -42,15 +42,20 @@
 
 | 模板 | 产出位置 | 用途 |
 |------|----------|------|
-| `01_USER_JOURNEY_TEMPLATE.md` | `docs/_foundation/01_USER_JOURNEY.md` | 用户旅程与系统责任 |
-| `02_ARCHITECTURE_TEMPLATE.md` | `docs/_foundation/02_ARCHITECTURE.md` | 系统架构设计 |
-| `03_MODULE_DECOMPOSITION_TEMPLATE.md` | `docs/_foundation/03_MODULE_DECOMPOSITION.md` | 模块分解与依赖 |
-| `04_ROADMAP_TEMPLATE.md` | `docs/_foundation/04_ROADMAP.md` | 开发路线图 |
-| `05_TECH_DECISIONS_TEMPLATE.md` | `docs/_foundation/05_TECH_DECISIONS.md` | 技术决策记录 |
+| `01_USER_JOURNEY.md` | `docs/_foundation/_planning/01_USER_JOURNEY.md` | 用户旅程与系统责任 |
+| `02_ARCHITECTURE.md` | `docs/_foundation/_planning/02_ARCHITECTURE.md` | 系统架构设计 |
+| `03_MODULE_DECOMPOSITION.md` | `docs/_foundation/_planning/03_MODULE_DECOMPOSITION.md` | 模块分解与依赖 |
+| `04_ROADMAP.md` | `docs/_foundation/_planning/04_ROADMAP.md` | 开发路线图 |
+| `05_TECH_DECISIONS.md` | `docs/_foundation/_planning/05_TECH_DECISIONS.md` | 技术决策记录 |
 | `06_CODE_STANDARDS.md` | `docs/_foundation/_planning/06_CODE_STANDARDS.md` | 项目级代码规范 |
 | `07_EXECUTION_PERMISSION_POLICY.md` | `docs/_foundation/_planning/07_EXECUTION_PERMISSION_POLICY.md` | Codex 执行权限策略 |
-| `_api_system_template/` | `docs/_foundation/_api_system/` | API 规范体系 |
-| `_ui_system_template/` | `docs/_foundation/_ui_system/` | UI 规范体系 |
+| `FOUNDATION_GATE_STATUS_TEMPLATE.yaml` | `docs/_foundation/FOUNDATION_GATE_STATUS.yaml` | Foundation Gate 运行状态 |
+| `00_FOUNDATION_GATE.md` | `docs/_foundation/00_FOUNDATION_GATE.md` | Foundation Gate 规则说明 |
+| `PROJECT_TRACKER_TEMPLATE.yaml` | `docs/_foundation/PROJECT_TRACKER.yaml` | 项目级任务追踪 |
+| `PROJECT_PM_STATE_TEMPLATE.yaml` | `docs/_foundation/PROJECT_PM_STATE.yaml` | Project PM Driver 状态 |
+| `PROJECT_ACTIVITY_LOG_TEMPLATE.yaml` | `docs/_foundation/PROJECT_ACTIVITY_LOG.yaml` | 项目活动日志 |
+| `_api_system/` | `docs/_foundation/_api_system/` | API 规范体系 |
+| `_ui_system/` | `docs/_foundation/_ui_system/` | UI 规范体系 |
 
 ### `_shared/` - 功能级共享模板
 
@@ -69,7 +74,7 @@
 | `PHASE_GATE_STATUS_TEMPLATE.yaml` | `docs/{feature}/PHASE_GATE_STATUS.yaml` | Gate 状态追踪 |
 | `REVIEW_ACTIONS_TEMPLATE.yaml` | `docs/{feature}/REVIEW_ACTIONS.yaml` | 评审行动项 |
 | `REVIEW_REPORT_TEMPLATE.md` | `docs/{feature}/REVIEW_REPORT.md` | 评审报告 |
-| `01_PROJECT_PROFILE_TEMPLATE.yaml` | `docs/{feature}/PROJECT_PROFILE.yaml` | 功能配置 |
+| `01_PROJECT_PROFILE_TEMPLATE.yaml` | `docs/{feature}/01_PROJECT_PROFILE.yaml` | 功能级画像与配置 |
 
 ---
 
@@ -107,7 +112,7 @@
 ### 手动使用
 
 1. 复制模板到目标目录
-2. 修改文件名，去掉 `_TEMPLATE` 后缀
+2. 如果模板文件名自带 `_TEMPLATE` 后缀，则在实例化时去掉该后缀；foundation 下不少模板本身已是正式文件名，直接按原名复制
 3. 填写模板内容
 
 ---

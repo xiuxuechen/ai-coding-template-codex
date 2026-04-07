@@ -39,4 +39,4 @@
 
 ---
 
-_从 03_INTERACTION_RULES_TEMPLATE.md 生成_
+_从 03_INTERACTION_RULES.md 模板生成_

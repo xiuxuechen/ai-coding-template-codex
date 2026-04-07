@@ -43,4 +43,4 @@
 
 ---
 
-_从 02_LAYOUT_RULES_TEMPLATE.md 生成_
+_从 02_LAYOUT_RULES.md 模板生成_

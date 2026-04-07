@@ -23,11 +23,15 @@ CC_COLLABORATION/03_templates/00_foundation/
 **生成目标**：
 ```
 docs/_foundation/
+├── 00_FOUNDATION_GATE.md
+├── FOUNDATION_GATE_STATUS.yaml
+├── PROJECT_TRACKER.yaml
+├── PROJECT_PM_STATE.yaml
+├── PROJECT_ACTIVITY_LOG.yaml
 ├── _planning/
 ├── _db_system/
 ├── _api_system/        (仅 backend/fullstack)
-├── _ui_system/         (仅 frontend/fullstack)
-└── FOUNDATION_GATE_STATUS.yaml
+└── _ui_system/         (仅 frontend/fullstack)
 ```
 
 ## 执行步骤
@@ -57,6 +61,11 @@ docs/_foundation/
 
 现有目录结构：
 docs/_foundation/
+├── 00_FOUNDATION_GATE.md
+├── FOUNDATION_GATE_STATUS.yaml
+├── PROJECT_TRACKER.yaml
+├── PROJECT_PM_STATE.yaml
+├── PROJECT_ACTIVITY_LOG.yaml
 ├── _planning/
 ├── _db_system/
 ├── _api_system/
@@ -139,59 +148,25 @@ frontend_copy:
       - 05_WORKFLOWS_TEMPLATE.md
 ```
 
-### 6. 生成 FOUNDATION_GATE_STATUS.yaml
+### 6. 生成项目级 Foundation 运行文件
 
 ```yaml
-# FOUNDATION_GATE_STATUS.yaml
-# Foundation Gate 运行状态
-# 生成时间：{current_datetime}
-
-meta:
-  project_type: "{project_type}"
-  initialized_at: "{current_datetime}"
-  last_checked: null
-  gate_state: pending  # pending | passed | blocked
-
-documents:
-  user_journey:
-    exists: true
-    path: "docs/_foundation/_planning/01_USER_JOURNEY.md"
-    status: draft
-    checks: {}
-
-  architecture:
-    exists: true
-    path: "docs/_foundation/_planning/02_ARCHITECTURE.md"
-    status: draft
-    checks: {}
-
-  module_decomposition:
-    exists: true
-    path: "docs/_foundation/_planning/03_MODULE_DECOMPOSITION.md"
-    status: draft
-    checks: {}
-
-  roadmap:
-    exists: true
-    path: "docs/_foundation/_planning/04_ROADMAP.md"
-    status: draft
-    checks: {}
-
-approvals:
-  pm:
-    approved: false
-    approved_by: null
-    approved_at: null
-  architect:
-    approved: false
-    approved_by: null
-    approved_at: null
-
-summary:
-  block_count: 0
-  warn_count: 0
-  gate_state: pending
-  blocked_reason: null
+runtime_files:
+  - from: "00_FOUNDATION_GATE.md"
+    to: "docs/_foundation/00_FOUNDATION_GATE.md"
+    mode: "copy"
+  - from: "FOUNDATION_GATE_STATUS_TEMPLATE.yaml"
+    to: "docs/_foundation/FOUNDATION_GATE_STATUS.yaml"
+    mode: "instantiate"
+  - from: "PROJECT_TRACKER_TEMPLATE.yaml"
+    to: "docs/_foundation/PROJECT_TRACKER.yaml"
+    mode: "instantiate"
+  - from: "PROJECT_PM_STATE_TEMPLATE.yaml"
+    to: "docs/_foundation/PROJECT_PM_STATE.yaml"
+    mode: "instantiate"
+  - from: "PROJECT_ACTIVITY_LOG_TEMPLATE.yaml"
+    to: "docs/_foundation/PROJECT_ACTIVITY_LOG.yaml"
+    mode: "instantiate"
 ```
 
 ### 7. 输出结果
@@ -225,7 +200,11 @@ docs/_foundation/
 │   ├── 04_PAGES_TEMPLATE.md      # 页面模板
 │   └── 05_WORKFLOWS_TEMPLATE.md  # 工作流模板
 │
-└── FOUNDATION_GATE_STATUS.yaml   # Gate 状态
+├── 00_FOUNDATION_GATE.md         # Foundation Gate 说明
+├── FOUNDATION_GATE_STATUS.yaml   # Foundation Gate 状态
+├── PROJECT_TRACKER.yaml          # 项目级任务追踪
+├── PROJECT_PM_STATE.yaml         # Project PM Driver 状态
+└── PROJECT_ACTIVITY_LOG.yaml     # 项目活动日志
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📝 下一步操作
@@ -278,7 +257,11 @@ docs/_foundation/
 │   ├── 02_YAML_SCHEMA_CONVENTIONS.md
 │   └── 03_EXTERNAL_API_CONVENTIONS.md
 │
-└── FOUNDATION_GATE_STATUS.yaml
+├── 00_FOUNDATION_GATE.md
+├── FOUNDATION_GATE_STATUS.yaml
+├── PROJECT_TRACKER.yaml
+├── PROJECT_PM_STATE.yaml
+└── PROJECT_ACTIVITY_LOG.yaml
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📝 下一步操作
@@ -307,7 +290,11 @@ docs/_foundation/
 ├── _db_system/                   # 数据库规范 (1 file)
 ├── _api_system/                  # API 规范体系 (4 files)
 ├── _ui_system/                   # UI 设计系统 (6 files)
-└── FOUNDATION_GATE_STATUS.yaml
+├── 00_FOUNDATION_GATE.md
+├── FOUNDATION_GATE_STATUS.yaml
+├── PROJECT_TRACKER.yaml
+├── PROJECT_PM_STATE.yaml
+└── PROJECT_ACTIVITY_LOG.yaml
 
 总计：18 个模板文件
 

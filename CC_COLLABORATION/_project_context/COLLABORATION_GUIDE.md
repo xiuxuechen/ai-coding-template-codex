@@ -193,7 +193,11 @@ docs/_foundation/
 ├── _api_system/               # API 规范
 ├── _db_system/                # DB 规范
 ├── _ui_system/                # UI 规范
-└── FOUNDATION_GATE_STATUS.yaml # Foundation Gate 状态
+├── 00_FOUNDATION_GATE.md      # Foundation Gate 说明
+├── FOUNDATION_GATE_STATUS.yaml # Foundation Gate 状态
+├── PROJECT_TRACKER.yaml       # 项目跟踪
+├── PROJECT_PM_STATE.yaml      # Project PM 状态
+└── PROJECT_ACTIVITY_LOG.yaml  # 项目活动日志
 
 docs/{feature}/
 ├── 10_CONTEXT.md              # 功能背景

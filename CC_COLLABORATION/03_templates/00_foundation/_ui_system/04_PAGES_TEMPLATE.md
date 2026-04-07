@@ -56,4 +56,4 @@
 
 ---
 
-_从 04_PAGE_TEMPLATES_TEMPLATE.md 生成_
+_从 04_PAGES_TEMPLATE.md 模板生成_

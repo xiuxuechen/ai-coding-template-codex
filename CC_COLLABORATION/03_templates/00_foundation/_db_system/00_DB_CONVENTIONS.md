@@ -135,4 +135,4 @@ CREATE INDEX idx_{table}_{foreign_key}_id ON {table_name}({foreign_key}_id);
 
 ---
 
-_从 03_DB_CONVENTIONS_TEMPLATE.md 生成_
+_从 00_DB_CONVENTIONS.md 模板生成_

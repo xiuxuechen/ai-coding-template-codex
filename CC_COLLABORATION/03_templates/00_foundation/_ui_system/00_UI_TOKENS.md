@@ -102,4 +102,4 @@
 
 ---
 
-_从 00_UI_TOKENS_TEMPLATE.md 生成_
+_从 00_UI_TOKENS.md 模板生成_

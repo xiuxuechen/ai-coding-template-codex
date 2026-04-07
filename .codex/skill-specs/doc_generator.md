@@ -39,7 +39,7 @@ Codex 应该在以下情况**自动应用**这个 skill：
 ### 2. 读取模板
 
 ```
-模板路径: CC_COLLABORATION/03_templates/{phase}/{TEMPLATE_NAME}_TEMPLATE.md
+模板路径: 默认按 `CC_COLLABORATION/03_templates/{phase}/` 下真实模板文件名读取；feature 阶段模板通常带 `_TEMPLATE` 后缀，foundation 模板通常直接使用正式文件名。
 ```
 
 ### 3. 收集必要信息

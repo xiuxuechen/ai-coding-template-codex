@@ -1,0 +1,98 @@
+project:
+  name: "Codex AI 协作开发框架"
+  code: "ai-coding-template-codex"
+  domain: "AI 协作开发框架"
+  description: |
+    面向 Codex 的 AI 协作开发框架模板仓库，
+    用于承载 repo-level skills、工作流模板、阶段文档模板和协作文档体系。
+  owner: "@TBD"
+  team:
+    - "@TBD"
+
+ui:
+  has_ui: true
+  stack: "docs + templates"
+  ui_system:
+    enabled: true
+    path: "docs/_foundation/_ui_system/"
+  demo_policy:
+    required_before_implementation: false
+    demo_location: "docs/_demos/"
+    mock_api_required: false
+
+backend:
+  has_backend: false
+  stack: "framework-docs"
+  api_style: "rest"
+  database:
+    type: "none"
+    orm: "none"
+
+ai_collaboration:
+  uses_codex: true
+  uses_other_ai: []
+  mcp_tools: []
+  skills:
+    - name: "init-project"
+      trigger: "Foundation 初始化"
+      enabled: true
+      description: "初始化项目级 foundation 文档体系"
+    - name: "new-feature"
+      trigger: "Feature 初始化"
+      enabled: true
+      description: "创建 feature 目录和基础文档"
+    - name: "permission-governor"
+      trigger: "执行授权治理"
+      enabled: true
+      description: "治理命令执行权限和提权策略"
+  subagents: []
+  slash_commands:
+    - name: "/init-project"
+      purpose: "初始化 foundation 文档体系"
+      usage: "/init-project"
+    - name: "/new-feature"
+      purpose: "初始化新功能目录和基础文档"
+      usage: "/new-feature sales-device-reset-code-test"
+
+workflow:
+  phases:
+    foundation: true
+    kickoff: true
+    spec: true
+    demo: true
+    design: true
+    code: true
+    test: true
+    deploy: true
+  required_docs:
+    - "docs/_foundation/_planning/01_USER_JOURNEY.md"
+    - "docs/_foundation/_planning/02_ARCHITECTURE.md"
+    - "docs/_foundation/_planning/03_MODULE_DECOMPOSITION.md"
+    - "docs/_foundation/_planning/04_ROADMAP.md"
+    - "docs/_foundation/_planning/06_CODE_STANDARDS.md"
+  optional_docs:
+    - "docs/_foundation/_planning/05_TECH_DECISIONS.md"
+    - "docs/_foundation/_planning/07_EXECUTION_PERMISSION_POLICY.md"
+    - "docs/_foundation/PROJECT_TRACKER.yaml"
+
+rules:
+  - "项目级 foundation 文档统一放在 docs/_foundation/ 下"
+  - "feature 文档统一放在 docs/{feature}/ 下"
+  - "项目级 Project Profile 放在仓库根目录 01_PROJECT_PROFILE.yaml"
+  - "feature 级画像不得再复用项目级文件命名产生歧义"
+
+environments:
+  development:
+    url: ""
+    api_url: ""
+  staging:
+    url: ""
+    api_url: ""
+  production:
+    url: ""
+    api_url: ""
+
+version:
+  profile_version: "1.0.0"
+  last_updated: "2026-04-06"
+  changelog: "补齐项目级 profile，并与 feature 级 profile 做语义分层"

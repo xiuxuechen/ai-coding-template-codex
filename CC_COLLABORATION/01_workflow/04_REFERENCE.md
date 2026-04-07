@@ -71,8 +71,11 @@ docs/
 │   ├── _api_system/                 # API 规范
 │   ├── _db_system/                  # DB 规范
 │   ├── _ui_system/                  # UI 规范
+│   ├── 00_FOUNDATION_GATE.md        # Foundation Gate 说明
 │   ├── FOUNDATION_GATE_STATUS.yaml  # Foundation Gate 状态
-│   └── PROJECT_TRACKER.yaml         # 项目跟踪（可选）
+│   ├── PROJECT_TRACKER.yaml         # 项目跟踪
+│   ├── PROJECT_PM_STATE.yaml        # Project PM 状态
+│   └── PROJECT_ACTIVITY_LOG.yaml    # 项目活动日志
 │
 ├── FEATURE_CHECKLIST.md             # 功能开发清单
 └── {feature}/                       # 功能目录
@@ -132,11 +135,11 @@ CC_COLLABORATION/
 
 | 模板 | 用途 |
 |------|------|
-| `01_USER_JOURNEY_TEMPLATE.md` | 用户旅程 |
-| `02_ARCHITECTURE_TEMPLATE.md` | 系统架构 |
-| `03_MODULE_DECOMPOSITION_TEMPLATE.md` | 模块分解 |
-| `04_ROADMAP_TEMPLATE.md` | 路线图 |
-| `05_TECH_DECISIONS_TEMPLATE.md` | 技术决策 |
+| `01_USER_JOURNEY.md` | 用户旅程 |
+| `02_ARCHITECTURE.md` | 系统架构 |
+| `03_MODULE_DECOMPOSITION.md` | 模块分解 |
+| `04_ROADMAP.md` | 路线图 |
+| `05_TECH_DECISIONS.md` | 技术决策 |
 | `06_CODE_STANDARDS.md` | 项目级代码规范 |
 | `07_EXECUTION_PERMISSION_POLICY.md` | Codex 执行权限策略 |
 

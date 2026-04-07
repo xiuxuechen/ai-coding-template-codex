@@ -1,0 +1,64 @@
+# FOUNDATION_GATE_STATUS.yaml
+# Foundation Gate 运行状态
+# 模板版本：v1.0
+# 生成时间：{{datetime}}
+
+meta:
+  project: "{{project_name}}"
+  project_type: "{{project_type}}"
+  initialized_at: "{{datetime}}"
+  last_checked: null
+  gate_state: pending  # pending | passed | blocked
+
+documents:
+  user_journey:
+    exists: true
+    path: "docs/_foundation/_planning/01_USER_JOURNEY.md"
+    status: draft
+    checks: {}
+
+  architecture:
+    exists: true
+    path: "docs/_foundation/_planning/02_ARCHITECTURE.md"
+    status: draft
+    checks: {}
+
+  module_decomposition:
+    exists: true
+    path: "docs/_foundation/_planning/03_MODULE_DECOMPOSITION.md"
+    status: draft
+    checks: {}
+
+  roadmap:
+    exists: true
+    path: "docs/_foundation/_planning/04_ROADMAP.md"
+    status: draft
+    checks: {}
+
+  code_standards:
+    exists: true
+    path: "docs/_foundation/_planning/06_CODE_STANDARDS.md"
+    status: draft
+    checks: {}
+
+  execution_permission_policy:
+    exists: true
+    path: "docs/_foundation/_planning/07_EXECUTION_PERMISSION_POLICY.md"
+    status: draft
+    checks: {}
+
+approvals:
+  pm:
+    approved: false
+    approved_by: null
+    approved_at: null
+  architect:
+    approved: false
+    approved_by: null
+    approved_at: null
+
+summary:
+  block_count: 0
+  warn_count: 0
+  gate_state: pending
+  blocked_reason: null

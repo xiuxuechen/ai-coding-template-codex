@@ -32,4 +32,4 @@
 
 ---
 
-_从 05_WORKFLOW_TEMPLATES_TEMPLATE.md 生成_
+_从 05_WORKFLOWS_TEMPLATE.md 模板生成_
