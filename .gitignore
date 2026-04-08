@@ -36,6 +36,7 @@ Thumbs.db
 .claude/settings.local.json
 .claude/gui-sessions/
 /project
+/tmp
 /tmp-test-logs
 
 /docs/
