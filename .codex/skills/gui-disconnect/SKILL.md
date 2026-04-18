@@ -1,37 +1,87 @@
 ---
 name: gui-disconnect
-description: Remove the current GUI bridge session and stop accepting GUI-originated commands for this terminal. Use when Codex is asked to disconnect from the GUI bridge or answer requests like “断开 GUI”, “关闭 GUI 连接”, “把当前终端从 GUI 里移除”, or “执行 gui-disconnect”.
+description: 你是一个 AI 协作开发助手。用户请求断开与 Coding GUI 的连接。
 ---
 
 # GUI Disconnect
 
-## Overview
+## 触发方式
 
-断开当前终端与 GUI 的连接，并把它从会话列表中移除。
+用户可以通过以下方式触发：
+- `/gui-disconnect`
+- "断开 GUI"
+- "关闭 GUI 连接"
 
-## Trigger Examples
+## 功能说明
 
-- `断开 GUI`
-- `关闭 GUI 连接`
-- `把当前终端从 GUI 里移除`
-- `执行 gui-disconnect`
+此命令将当前 CLI 终端从 GUI Session 列表中移除，停止接收 GUI 命令。
 
-## Workflow
+## 执行步骤
 
-- 检查当前终端是否存在活跃 GUI session。
-- 定位与当前终端绑定的 session 记录。
-- 移除或停用该 session，并清理残留状态。
-- 输出断开结果和任何需要手动处理的残留项。
+### 1. 检查连接状态
 
-## Read Only When Needed
+检查当前终端是否有活跃的 GUI Session。
 
-- `D:\project\ai-coding-template-codex\ai-coding-template-src\.codex\commands\gui-disconnect.md`
-- `D:\project\ai-coding-template-codex\ai-coding-template-src\.codex\settings.json`
-- `D:\project\ai-coding-template-codex\ai-coding-template-src\.codex\hooks\check-gui-cmd.py`
+如果没有连接：
+```
+⚠️ 当前终端未连接到 GUI
 
-## Do Not
+💡 提示：使用 /gui-connect 建立连接
+```
 
-- 不要误删其他终端的 session
-- 不要在未连接时谎称断开成功
-- 不要留下脏状态而不说明
-- 不要把断开与全局清理混为一谈
+### 2. 更新 Session 状态
+
+将 Session 文件中的 `status` 字段更新为 `disconnected`：
+
+```json
+{
+  "status": "disconnected",
+  "lastActiveAt": "{当前时间}"
+}
+```
+
+### 3. 停止监听机制
+
+- 停止文件监听（fs.watch）
+- 停止心跳更新（clearInterval）
+
+### 4. 可选：删除 Session 文件
+
+询问用户是否删除 Session 文件：
+
+```
+是否删除 Session 文件？[Y/n]
+```
+
+- 选择 Y：删除 `.codex/gui-sessions/session-{id}.*` 所有相关文件
+- 选择 n：保留文件，GUI 会显示为"已断开"状态
+
+### 5. 显示断开信息
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔌 GUI 连接已断开
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Session ID: {id}
+状态: ○ 已断开
+持续时间: {duration}
+
+💡 提示：
+• 使用 /gui-connect 重新建立连接
+• 使用 /gui-cleanup 清理所有过期 Session
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+## 自动断开场景
+
+以下场景会自动触发断开：
+
+1. **终端关闭**: 进程退出时自动清理
+2. **心跳超时**: 超过 60 秒未更新心跳
+3. **项目切换**: 切换到不同项目目录
+
+## 注意事项
+
+- 断开后 GUI 会立即感知到状态变化
+- 未删除的 Session 文件会在 24 小时后自动清理
+- 断开不会影响 CLI 的其他功能

@@ -1,40 +1,186 @@
 ---
 name: daily-summary
-description: Generate a daily summary for one feature or across all active features by consolidating done, in-progress, and blocked items from progress logs. Use when Codex is asked for a daily recap, team update, or answer requests like “生成日报”, “汇总今天做了什么”, “给我一份今日工作总结”, “整理今天的完成项和阻塞项”, or “执行 daily-summary”.
+description: 你是一个 AI 协作开发助手。用户请求生成今日工作总结。
 ---
 
 # Daily Summary
 
-## Overview
 
-根据今日更新过的进度日志生成单功能或全局每日总结，沉淀完成项、进行中、阻塞项和明日计划。
+## 参数
 
-## Trigger Examples
+- `$ARGUMENTS`：可选，指定功能模块名称。如果不指定，则汇总所有功能模块。
 
-- `生成今天的日报`
-- `汇总今天做了什么`
-- `给我一份今日工作总结`
-- `执行 daily-summary，按 feature 汇总`
+## 执行步骤
 
-## Workflow
+### 1. 确定范围
 
-- 判断范围是单个 feature 还是全局汇总。
-- 读取对应的 `90_PROGRESS_LOG.yaml`，提取今日完成项、`wip`、阻塞项和最新进度。
-- 生成结构化的每日总结内容，必要时写入 `91_DAILY_SUMMARY/<date>.md`。
-- 对比最近进度，提炼今日变化和明日优先事项。
-- 输出控制台摘要，并明确生成文件路径或跳过原因。
+**如果指定了功能名称：**
+- 仅读取 `docs/{feature-name}/90_PROGRESS_LOG.yaml`
 
-## Read Only When Needed
+**如果未指定功能名称：**
+- 扫描 `docs/` 目录，找到所有包含 `90_PROGRESS_LOG.yaml` 的功能模块
+- 汇总所有功能的进度
 
-- `D:\project\ai-coding-template-codex\ai-coding-template-src\.codex\commands\daily-summary.md`
-- `D:\project\ai-coding-template-codex\ai-coding-template-src\docs\codex-playbooks\daily-summary.md`
-- `D:\project\ai-coding-template-codex\ai-coding-template-src\.codex\commands\check-progress.md`
-- `D:\project\ai-coding-template-codex\ai-coding-template-src\docs\codex-playbooks\end-day.md`
+### 2. 读取进度日志
 
-## Do Not
+从每个 `90_PROGRESS_LOG.yaml` 中提取：
+- `meta.last_updated` - 最后更新时间
+- 所有 `status: done` 且 `completed_at` 为今天的任务
+- 所有 `status: wip` 的任务
+- 所有 `status: blocked` 的任务（如果有）
 
-- 不要把非今日完成的任务算进今日完成列表
-- 不要在没有依据时捏造进度增量
-- 不要忽略阻塞项或 `wip`
-- 不要在无更新时假装今天有成果
-- 不要漏写生成文件路径或范围说明
+### 3. 生成每日总结
+
+创建 `docs/{feature-name}/91_DAILY_SUMMARY/{date}.md` 文件（如果是单功能）
+或 `docs/_system/91_DAILY_SUMMARY/{date}.md`（如果是全局汇总）
+
+### 4. 总结模板
+
+```markdown
+# 每日工作总结
+
+> 日期：{current_date}
+> 生成时间：{current_datetime}
+> 范围：{feature-name | 全局}
+
+---
+
+## 📊 总体进度
+
+| 功能模块 | 当前阶段 | 完成度 | 今日变化 |
+|----------|----------|--------|----------|
+| {feature-name} | Phase {n} | {rate}% | +{delta}% |
+
+---
+
+## ✅ 今日完成
+
+### {feature-name}
+
+| 任务 ID | 任务描述 | 完成时间 |
+|---------|----------|----------|
+| {id} | {task} | {time} |
+
+---
+
+## 🔄 进行中
+
+### {feature-name}
+
+| 任务 ID | 任务描述 | 开始时间 | 备注 |
+|---------|----------|----------|------|
+| {id} | {task} | {time} | {notes} |
+
+---
+
+## 🚧 阻塞项
+
+### {feature-name}
+
+| 任务 ID | 任务描述 | 阻塞原因 | 需要支援 |
+|---------|----------|----------|----------|
+| {id} | {task} | {reason} | {help_needed} |
+
+---
+
+## 📝 明日计划
+
+根据当前进度，建议明日优先处理：
+
+1. {next_priority_1}
+2. {next_priority_2}
+3. {next_priority_3}
+
+---
+
+## 📈 燃尽图数据
+
+| 日期 | 总任务 | 已完成 | 剩余 | 完成率 |
+|------|--------|--------|------|--------|
+| {date} | {total} | {done} | {remaining} | {rate}% |
+
+---
+
+_由 /daily-summary 自动生成_
+```
+
+### 5. 输出结果
+
+**控制台输出摘要：**
+
+```
+📅 {current_date} 工作总结
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ 今日完成 ({done_count})
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• [{feature}] {task_description} ({task_id})
+• [{feature}] {task_description} ({task_id})
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔄 进行中 ({wip_count})
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• [{feature}] {task_description} ({task_id})
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚧 阻塞项 ({blocked_count})
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• [{feature}] {task_description} - {block_reason}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📈 整体进度
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{feature}: ████████░░ 80% (+5%)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 已生成: docs/{path}/91_DAILY_SUMMARY/{date}.md
+```
+
+### 6. 更新进度日志
+
+在对应的 `90_PROGRESS_LOG.yaml` 中：
+- 更新 `meta.last_updated` 为当前时间
+- 如果有 `daily_summaries` 字段，添加今日记录
+
+## 输出示例
+
+```
+📅 2024-12-11 工作总结
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ 今日完成 (3)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• [user-auth] 完成登录表单 UI (CODE-003)
+• [user-auth] 完成密码验证逻辑 (CODE-004)
+• [cc-tools-library] 创建 05_TOOLS 目录结构 (CODE-001)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔄 进行中 (2)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• [user-auth] 实现登录 API 调用 (CODE-005)
+• [cc-tools-library] 编写 Codex Workflows (CODE-003)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚧 阻塞项 (0)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+（无）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📈 整体进度
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+user-auth:        ████████░░ 80% (+10%)
+cc-tools-library: ████░░░░░░ 40% (+20%)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 已生成: docs/_system/91_DAILY_SUMMARY/2024-12-11.md
+```
+
+## 注意事项
+
+- 日期格式：YYYY-MM-DD
+- 时间格式：YYYY-MM-DDTHH:mm:ss+08:00
+- 如果当天没有任何更新，仍然生成总结，显示"今日无更新"
+- 进度变化（+delta%）基于与昨日总结的对比，如果没有昨日数据则不显示
+- 自动创建 `91_DAILY_SUMMARY/` 目录（如果不存在）

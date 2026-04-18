@@ -1,105 +1,201 @@
 ---
 name: start-day
-description: Start the work day by syncing the repository when appropriate, restoring the most relevant feature context, and surfacing today's next actions. Use when Codex is asked to begin work, resume the latest feature, restore today's context, or answer requests like “开始今天工作”, “帮我恢复今天要做的事情”, “看看今天先做什么”, “继续昨天做到一半的功能”, or “执行 start-day”.
+description: 你是一个 AI 协作开发助手。用户请求开始今天的工作，需要同步远程仓库并恢复上下文。
 ---
 
 # Start Day
 
-## Overview
 
-在开始当天工作时，先完成代码同步判断、功能定位、上下文恢复和待办提取，再进入具体实现。
+## 触发方式
 
-## Trigger Examples
+用户可以通过以下方式触发：
+- `/start-day` 或 `/start-day <feature>`
+- "开始工作"
+- "早上好"
+- "我来了"
 
-- `开始今天工作，帮我恢复上下文`
-- `看看今天最应该先做什么`
-- `继续昨天那个 feature`
-- `执行 start-day，先同步再恢复状态`
+## 参数
 
-## Workflow
+- `$ARGUMENTS`：可选，功能模块名称（如 `user-auth`）。如未指定，自动检测最近活跃的功能。
 
-### 1. 判断是否需要 Git 同步
+## 执行步骤
 
-如果当前目录是 Git 仓库：
+### 1. 显示欢迎信息
 
-- 先查看当前分支与工作区状态
-- 如适合安全同步，再执行 `git pull origin <当前分支>` 或等效同步动作
-- 如果出现冲突，立即停止后续恢复流程，并明确提示先解决冲突
+```
+🌅 早上好！让我们开始今天的工作。
 
-如果不是 Git 仓库：
+正在同步和恢复工作上下文...
+```
 
-- 说明已跳过 Git 同步
-- 继续恢复上下文
+### 2. 执行 Git Pull
 
-### 2. 确定今日功能模块
+首先同步远程仓库的最新代码：
 
-如果用户明确给了 feature 名称，直接使用。
+```bash
+git pull origin <当前分支>
+```
 
-如果没有明确给出：
+**输出处理**：
+- ✅ 成功：显示更新的文件列表
+- ⚠️ 有冲突：提示用户需要先解决冲突
+- ℹ️ 已是最新：继续下一步
 
-- 扫描 `docs/` 下的 feature 目录
-- 优先读取各目录中的 `90_PROGRESS_LOG.yaml`
-- 根据 `last_updated`、`wip`、`next_step`、`cc_checkpoint` 判断最近最值得恢复的功能
-- 如果候选项超过一个，先给出排序依据，再请用户选择或先展示全局概览
+示例输出：
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📥 Git 同步
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+分支: main
+状态: ✅ 已同步最新代码
 
-### 3. 恢复上下文
+更新的文件：
+• docs/user-auth/90_PROGRESS_LOG.yaml (modified)
+• src/auth/login.vue (modified)
+```
 
-优先读取：
+### 3. 检测功能模块
 
-- `docs/<feature>/90_PROGRESS_LOG.yaml`
-- `docs/<feature>/10_CONTEXT.md`
-- `docs/<feature>/40_DESIGN_FINAL.md`
-- `cc_checkpoint.context_files` 中记录的关键文件
+如果未指定功能模块，自动检测：
 
-需要时补充读取：
+1. 扫描 `docs/` 目录下所有功能模块
+2. 读取每个模块的 `90_PROGRESS_LOG.yaml`
+3. 按 `last_updated` 排序，找出最近活跃的模块
+4. 如果有多个活跃模块，列出供用户选择
 
-- `docs/<feature>/20_API_SPEC.md`
-- `docs/<feature>/21_UI_FLOW_SPEC.md`
-- 最近编辑的代码文件
+```
+检测到以下活跃功能模块：
+1. user-auth (最后更新: 今天 18:30)
+2. payment-system (最后更新: 昨天 17:45)
 
-输出时至少说明：
+请选择要恢复的功能，或输入 "all" 查看全局进度。
+```
 
-- 当前 feature
-- 当前 phase 或阶段
-- 上次操作
-- 下一步
-- 关键上下文文件
+### 4. 执行 /iresume
 
-### 4. 提取今日待办
+调用 `/iresume <feature>` 恢复工作上下文。
 
-优先整理：
+### 5. 显示今日待办
 
-- `wip` 任务
-- `next_step`
-- 高优先级 `pending` 任务
-- 已知阻塞项
+从 PROGRESS_LOG 中提取待办事项：
 
-不要随机编造任务，也不要把长期 backlog 当作今日首要动作。
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 今日待办
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⏭️ 下一步: {next_step}
 
-### 5. 输出开始工作摘要
+🔄 进行中 ({wip_count}):
+{列出进行中的任务}
 
-最终摘要至少包含：
+⏳ 今日计划 ({pending_count} 待开始):
+{列出建议今天完成的任务}
+```
 
-- Git 同步结果或跳过原因
-- 当前 feature
-- 当前阶段与整体进度
-- 上次操作
-- 今日待办
-- 第一优先动作
+### 6. 输出完整摘要
 
-## Read Only When Needed
+```
+🌅 每日开始 - {feature-name}
 
-在需要更完整流程或输出格式时，读取：
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📥 Git 同步
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+分支: {branch}
+状态: {sync_status}
 
-- `D:\project\ai-coding-template-codex\ai-coding-template-src\.codex\commands\start-day.md`
-- `D:\project\ai-coding-template-codex\ai-coding-template-src\.codex\commands\iresume.md`
-- `D:\project\ai-coding-template-codex\ai-coding-template-src\docs\codex-playbooks\start-day.md`
-- `D:\project\ai-coding-template-codex\ai-coding-template-src\docs\codex-playbooks\check-progress.md`
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 上下文恢复
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• 功能模块: {feature-name}
+• 当前阶段: Phase {phase} - {phase_name}
+• 整体进度: {completion_rate}
+• 上次操作: {last_action}
 
-## Do Not
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 今日待办
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⏭️ 下一步: {next_step}
 
-- 不要假装已经执行了 `git pull`
-- 不要在检测到冲突后继续推进业务工作
-- 不要在没有证据时臆造 feature 状态
-- 不要忽略 `wip` 和 `next_step`
-- 不要把这个 skill 误说成 CLI 原生 slash command 菜单项
+🔄 进行中:
+{列出进行中的任务}
+
+⏳ 建议完成:
+{列出建议今天完成的任务}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ 准备就绪！可以开始工作了。
+
+💡 提示：
+• 下班前记得运行 /end-day 更新进度并提交代码
+• 随时使用 /check-progress 查看当前状态
+```
+
+## 输出示例
+
+```
+🌅 每日开始 - user-auth
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📥 Git 同步
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+分支: main
+状态: ✅ 已同步最新代码 (2 files updated)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 上下文恢复
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• 功能模块: user-auth
+• 当前阶段: Phase 5 - Code（开发实现）
+• 整体进度: 45%
+• 上次操作: 完成登录表单 UI
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 今日待办
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⏭️ 下一步: 实现登录 API 调用
+
+🔄 进行中 (1):
+• [CODE-004] 实现登录 API 调用
+
+⏳ 建议完成 (2):
+• [CODE-005] 实现 Token 存储
+• [CODE-006] 添加登录状态管理
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ 准备就绪！可以开始工作了。
+
+💡 提示：
+• 下班前记得运行 /end-day 更新进度并提交代码
+• 随时使用 /check-progress 查看当前状态
+```
+
+## 冲突处理
+
+如果 git pull 检测到冲突：
+
+```
+⚠️ Git 同步时发现冲突
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+冲突文件:
+• src/auth/login.vue
+• docs/user-auth/90_PROGRESS_LOG.yaml
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+请先解决冲突后再继续：
+1. 查看冲突: git diff
+2. 解决冲突后: git add <文件>
+3. 完成合并: git commit
+
+解决完成后，重新运行 /start-day
+```
+
+## 注意事项
+
+- 自动检测当前 Git 分支
+- 如果不在 Git 仓库中，跳过 git pull 步骤
+- 优先显示进行中（wip）的任务
+- 建议完成的任务按优先级排序（P0 > P1 > P2 > P3）
+- 更新 `cc_checkpoint.session_id` 为今日新 session
