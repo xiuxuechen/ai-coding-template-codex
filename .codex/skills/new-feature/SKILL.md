@@ -308,8 +308,9 @@ docs/{feature-name}/
 
 📝 下一步操作：
 1. 补充 10_CONTEXT.md 中的功能描述、目标和范围
-2. 与团队确认功能上下文后，将状态改为 Approved
-3. 进入 Spec 阶段，编写 40_DESIGN_FINAL.md
+2. 执行 /init-gate {feature-name} 初始化 Phase Gate 文件
+3. 与团队确认功能上下文后，将状态改为 Approved
+4. 进入 Spec 阶段，编写 40_DESIGN_FINAL.md
 
 💡 提示：
 - 使用 /check-progress {feature-name} 查看进度
